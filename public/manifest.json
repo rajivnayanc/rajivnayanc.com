@@ -4,22 +4,67 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "241x241",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo64.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "64x64"
     },
     {
-      "src": "logo512.png",
+      "src": "logo241.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "241x241"
+    },
+    {
+      "src": "logo370.png",
+      "type": "image/png",
+      "sizes": "370x370"
+    },
+    {
+      "src": "logo465.png",
+      "type": "image/png",
+      "sizes": "465x465"
+    },
+    {
+      "src": "logo541.png",
+      "type": "image/png",
+      "sizes": "541x541"
+    },
+    {
+      "src": "logo631.png",
+      "type": "image/png",
+      "sizes": "631x631"
+    },
+    {
+      "src": "logo692.png",
+      "type": "image/png",
+      "sizes": "692x692"
+    },
+    {
+      "src": "logo761.png",
+      "type": "image/png",
+      "sizes": "761x761"
+    },
+    {
+      "src": "logo812.png",
+      "type": "image/png",
+      "sizes": "812x812"
+    },
+    {
+      "src": "logo897.png",
+      "type": "image/png",
+      "sizes": "897x897"
+    },
+    {
+      "src": "logo1000.png",
+      "type": "image/png",
+      "sizes": "1000x1000"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#111111",
+  "background_color": "#222222"
 }
