@@ -1,10 +1,11 @@
 import './App.css';
+import SideNavbar from './Components/SideNavbar';
 
 function App() {
   return (
-    <div className="container">
-      Hello
-    </div>
+    <>
+      <SideNavbar/>
+    </>
   );
 }
 

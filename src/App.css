@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    font-size: 16px;
+    --primaryColor:#212121;
+    --secondaryColor:#424242;
+    --backgroundColor:#f5f5f5;
+    --surfaceColor:#eeeeee;
+    --onSurfaceColor:#111111;
+    --onPrimaryColor:#e0e0e0;
+    --onSecondaryColor:#f5f5f5;
+    --shadowColor:#555;
+    --animationTime:300ms;
+}
