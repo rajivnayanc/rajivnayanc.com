@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function MainContent() {
     return (
-        <section><h1>Hello</h1>
+        <section>
+            <h1>Hello</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat fringilla libero quis feugiat. Donec augue lorem, laoreet in velit quis, mollis euismod arcu. Fusce laoreet a tellus nec cursus. Nam quis dolor vestibulum ligula lobortis porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras placerat lectus ex, a maximus magna dignissim lacinia. Quisque mi nibh, eleifend ac nibh auctor, consectetur fermentum lorem. Nunc dictum gravida nulla eu porttitor. Donec ex mauris,
             cursus sit amet mattis a, elementum ut eros. Pellentesque dapibus tempor sem at pretium.</p>
 
@@ -46,4 +47,4 @@ function MainContent() {
     )
 }
 
-export default MainContent
+export default MainContent;
