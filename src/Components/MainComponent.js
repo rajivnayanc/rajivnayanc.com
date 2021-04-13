@@ -30,7 +30,7 @@ function MainComponent() {
         <Router>
             <div>
                 <Navbar setTheme={toggleTheme} theme={theme}/>
-                <MainContent/>
+                <MainContent theme={theme}/>
             </div>
         </Router>
     )

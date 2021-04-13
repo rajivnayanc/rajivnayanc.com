@@ -16,7 +16,7 @@ export const Button = styled.div`
     color: white;
     font-weight: normal;
     padding: 0.5rem;
-    margin-left: 2rem;
+    margin: 1rem;
     cursor: pointer;
     font-size:1rem;
     transition: all 300ms;
@@ -35,14 +35,17 @@ export const TagLineDiv = styled.div`
     min-height:100%;
     @media only screen and (max-width:600px){
         width: 100%;
+        align-items:center;
     }
 `;
 
 export const PCustom = styled.p`
-    // color:${props=>props.color};
+    display: inline;
     color:var(--text-secondary);
     font-size:clamp(${props=>props.minsize} , ${props=>props.size} , ${props=>props.maxsize} );
-    font-weight:${(props)=>props.weight}
+    font-weight:${(props)=>props.weight};
+    margin:0;
+    padding:0;
 `;
 
 export const PhotoDiv = styled.div`
@@ -50,7 +53,7 @@ export const PhotoDiv = styled.div`
     flex-direction: column;
     min-height:100%;
     @media only screen and (max-width:600px){
-        display:none;
+        align-items:center;
     }
 `;
 
@@ -60,4 +63,7 @@ export const StyleImgTag = styled.img`
                   drop-shadow(-1px -1px 5px rgba(50,50,50,150));
     filter: drop-shadow(1px 1px 5pxpx rgba(50,50,50,150)) 
             drop-shadow(-1px -1px 5pxpx rgba(50,50,50,150));
+    @media only screen and (max-width:600px){
+        margin: 0 auto;
+    }
 `;

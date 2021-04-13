@@ -1,10 +1,12 @@
 import React from 'react';
-
+import ParticlesJsCanvas from './SubComponents/ParticlesJsCanvas';
 import {ContainerDiv, Button, TagLineDiv, PCustom, PhotoDiv, StyleImgTag} from './SubComponents/HomePageStyleComponents';
 import profilePhoto from '../../../images/profilePic/rajiv.png';
-
-function HomePage() {
+import Typed from 'react-typed';
+function HomePage(props) {
     return (
+        <>
+        <ParticlesJsCanvas theme={props.theme} />
         <ContainerDiv className="container-fluid d-flex flex-column">
             <div style={{height:"3rem"}}  className="row d-none d-sm-flex align-items-center">
                 <div className="col-3">
@@ -18,22 +20,35 @@ function HomePage() {
             <div className="row d-flex flex-row flex-grow-1 align-items-center justify-content-center">
                 <div className="col-12 col-sm-8 p-0 h-100">
                    <TagLineDiv>
-                       <PCustom color="white" minsize="14px" maxsize="18px" size="5vw">Hi, my name is ... </PCustom>
-                       <PCustom color="white" minsize="20px" maxsize="40px" size="50% + 4vw" weight="700">
+                       <PCustom color="white" minsize="14px" maxsize="30px" size="6vw" weight="500">Hi, my name is ... </PCustom>
+                       <PCustom color="white" minsize="30px" maxsize="70px" size="8vw" weight="700">
                            Rajiv Nayan Choubey 
                         </PCustom>
-                       <PCustom color="white" minsize="20px" maxsize="40px" size="5vw" weight="200">
-                           A Software Developer 
-                        </PCustom>
+                        <Typed strings={[
+                                "I am a Computer Engineer",
+                                "I am a Developer",
+                                "I am a Coder",
+                                "I am a Learner",
+                            ]}
+                            typeSpeed={40}
+                            backSpeed={50}
+                            loop>
+                            <PCustom color="white" minsize="20px" maxsize="50px" size="5vw" weight="400" />
+                        </Typed>
+                        <div className="d-flex d-sm-none flex-row justify-content-start align-items-center">
+                            <Button>Contact Me</Button>
+                            <Button>Resume</Button>
+                        </div>
                    </TagLineDiv>
                 </div>
-                <div className="col-4 d-none d-sm-flex col p-0 h-100">
+                <div className="col-12 col-sm-4 col p-0 h-100">
                     <PhotoDiv>
                         <StyleImgTag src={profilePhoto} width="80%" alt="Rajiv Nayan Choubey" />
                     </PhotoDiv>
                 </div>
             </div>
         </ContainerDiv>
+        </>
     )
 }
 
