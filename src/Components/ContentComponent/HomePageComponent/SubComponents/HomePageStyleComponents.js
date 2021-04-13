@@ -39,7 +39,8 @@ export const TagLineDiv = styled.div`
 `;
 
 export const PCustom = styled.p`
-    color:${props=>props.color};
+    // color:${props=>props.color};
+    color:var(--text-secondary);
     font-size:clamp(${props=>props.minsize} , ${props=>props.size} , ${props=>props.maxsize} );
     font-weight:${(props)=>props.weight}
 `;

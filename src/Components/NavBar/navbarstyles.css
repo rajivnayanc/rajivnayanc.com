@@ -41,7 +41,7 @@
     transition: var(--animationTime);
 }
 .active{
-    background-color: #000000;
+    background-color: var(--bg-active);
     filter: grayscale(0%) opacity(1);
     color: var(--text-secondary)
 }
@@ -51,7 +51,7 @@
 }
 .nav-link:hover{
     filter: grayscale(0%) opacity(1);
-    background-color: var(--bg-primary);
+    background-color: var(--bg-hover);
     color: var(--text-secondary)
 }
 
@@ -106,7 +106,7 @@
     margin-left: auto;
     width: 3rem;
     height: 3rem;
-    color: gray;
+    color: var(--text-primary);
     transition: all var(--animationTime);
 }
 .logo .nav-link .toggleButton i{
@@ -115,8 +115,8 @@
     padding: 0;
 }
 .logo .nav-link .toggleButton:hover{
-    background: rgba(0,0,0,1);
-    color: white;
+    background: var(--bg-hover);
+    color: var(--text-primary);
 }
 .logo .logoImg {
     transform: rotate(0deg);
@@ -141,7 +141,7 @@
         position: fixed;
         top: 0;
         width: 100vw;
-        box-shadow: 0px 0px 4px 1px rgba(255,255,255,0.25);
+        box-shadow: 0px 0px 4px 1px var(--shadow-color);
         height: fit-content;
     }
     .logo{
@@ -198,7 +198,7 @@
         top:0;
         width: 5rem;
         height: 100vh;
-        box-shadow: 0px 0px 4px 1px rgba(255,255,255,0.25);
+        box-shadow: 0px 0px 4px 1px var(--shadow-color);
     }
     .navbar:hover{
         width: 14rem;

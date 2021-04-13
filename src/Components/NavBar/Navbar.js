@@ -4,7 +4,7 @@ import {Link, NavLink} from 'react-router-dom';
 
 import './navbarstyles.css';
 
-function NavBar() {
+function NavBar(props) {
     const [navMenuExpanded, setNavMenuExpanded] = useState(false);
     const toggleNavBarMenu = (e)=>{
         e.preventDefault();
@@ -21,6 +21,12 @@ function NavBar() {
                 <Link className="nav-link logo-link" to = "/">
                     <span className="link-text logo-text">@rajivnayanc</span>
                     <img src={logo} className="logoImg" alt="logo"/>
+                    <span onClick={(e)=>props.setTheme()} className="d-flex d-sm-none ml-auto">
+                    <i style={{color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} 
+                    className={`fa fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
+                    </span>
+                    
+
                     <button onClick = {toggleNavBarMenu} className="toggleButton">
                             <i className = "fa fa-bars"></i>
                     </button>
@@ -49,24 +55,28 @@ function NavBar() {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink onClick={hideNavBarMenu} to="/experience" className="nav-link" activeStyle>
+                        <NavLink onClick={hideNavBarMenu} to="/experience" className="nav-link">
                             <i className="fa fa-briefcase"></i>
                             <span className="link-text">Experience</span>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink onClick={hideNavBarMenu} to="/projects" className="nav-link" activeStyle>
+                        <NavLink onClick={hideNavBarMenu} to="/projects" className="nav-link">
                             <i className="fa fa-tasks"></i>
                             <span className="link-text">Projects</span>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink onClick={hideNavBarMenu} to="/publications" className="nav-link" activeStyle>
+                        <NavLink onClick={hideNavBarMenu} to="/publications" className="nav-link">
                             <i className="fa fa-file"></i>
                             <span className="link-text">Publications</span>
                         </NavLink>
                     </li>
-                    
+                    <li onClick={(e)=>props.setTheme()} className="nav-item d-none d-sm-flex">
+                        <div style={{marginLeft:"2rem", marginTop:"2rem"}}>
+                            <i style={{color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} className={`fa fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
