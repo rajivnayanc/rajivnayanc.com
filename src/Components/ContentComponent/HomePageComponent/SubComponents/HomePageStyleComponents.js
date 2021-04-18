@@ -19,11 +19,12 @@ export const Button = styled.div`
     margin: 1rem;
     cursor: pointer;
     font-size:1rem;
-    transition: all 300ms;
+    transform: scale(1);
+    transition: all var(--animationTime);
     border-radius: 8px;
     &:hover{
         background-color: rgb(2, 117, 216);
-        padding: 0.75rem;
+        transform: scale(1.2);
         border-radius: 4px;
     }
 `;
@@ -63,7 +64,12 @@ export const StyleImgTag = styled.img`
                   drop-shadow(-1px -1px 5px rgba(50,50,50,150));
     filter: drop-shadow(1px 1px 5pxpx rgba(50,50,50,150)) 
             drop-shadow(-1px -1px 5pxpx rgba(50,50,50,150));
+    transform: scale(1);
+    transition: all var(--animationTime);
     @media only screen and (max-width:600px){
         margin: 0 auto;
+    }
+    &:hover{
+        transform: scale(1.1); 
     }
 `;

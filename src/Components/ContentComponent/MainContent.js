@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
-
+import styled from 'styled-components';
 import HomePage from './HomePageComponent/HomePage';
 import AboutPage from './AboutPageComponent/AboutPage';
 import EducationPage from './EducationPageComponent/EducationPage';
@@ -9,10 +9,23 @@ import ProjectsPage from './ProjectsPageComponent/ProjectsPage';
 import PublicationsPage from './PublicationsPageComponent/PublicationsPage';
 import {Error404} from './ErrorPageComponents/Errors';
 
+const MainSection = styled.section`
+    min-height: 100vh;
+    padding: 1rem;
+    @media only screen and (max-width:600px){
+        margin-left: 0rem;
+        margin-top:3rem
+    }
+
+    @media only screen and (min-width:600px){
+        margin-left: 5rem;
+    }
+`;
+
 function MainContent(props) {
     const theme = props.theme;
     return (
-        <section className="main-content">
+        <MainSection>
             <Switch>
                 <Route exact path="/">
                     <Redirect to ="/home" />
@@ -26,7 +39,7 @@ function MainContent(props) {
                 <Route path="/error404" component={Error404} />
                 <Redirect to="/error404" />
             </Switch>
-        </section>
+        </MainSection>
     )
 }
 

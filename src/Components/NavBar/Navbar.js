@@ -22,8 +22,8 @@ function NavBar(props) {
                     <span className="link-text logo-text">@rajivnayanc</span>
                     <img src={logo} className="logoImg" alt="logo"/>
                     <span onClick={(e)=>props.setTheme()} className="d-flex d-sm-none ml-auto">
-                    <i style={{color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} 
-                    className={`fa fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
+                    <i style={{cursor:"pointer" ,color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} 
+                    className={`fas fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
                     </span>
                     
 
@@ -72,9 +72,9 @@ function NavBar(props) {
                             <span className="link-text">Publications</span>
                         </NavLink>
                     </li>
-                    <li onClick={(e)=>props.setTheme()} className="nav-item d-none d-sm-flex">
+                    <li onClick={(e)=>props.setTheme()} style={{cursor:"pointer"}} className="nav-item d-none d-sm-flex">
                         <div style={{marginLeft:"2rem", marginTop:"2rem"}}>
-                            <i style={{color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} className={`fa fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
+                            <i style={{color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} className={`fas fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
                         </div>
                     </li>
                 </ul>
