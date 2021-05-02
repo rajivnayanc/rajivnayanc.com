@@ -62,8 +62,8 @@ export const StyleImgTag = styled.img`
     width=${props=>props.width};
     -webkit-filter: drop-shadow(1px 1px 5px rgba(50,50,50,150))
                   drop-shadow(-1px -1px 5px rgba(50,50,50,150));
-    filter: drop-shadow(1px 1px 5pxpx rgba(50,50,50,150)) 
-            drop-shadow(-1px -1px 5pxpx rgba(50,50,50,150));
+    filter: drop-shadow(1px 1px 5px rgba(50,50,50,150)) 
+            drop-shadow(-1px -1px 5px rgba(50,50,50,150));
     transform: scale(1);
     transition: all var(--animationTime);
     @media only screen and (max-width:600px){

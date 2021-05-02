@@ -21,7 +21,9 @@ function NavBar(props) {
                 <Link className="nav-link logo-link" to = "/">
                     <span className="link-text logo-text">@rajivnayanc</span>
                     <img src={logo} className="logoImg" alt="logo"/>
-                    <span onClick={(e)=>props.setTheme()} className="d-flex d-sm-none ml-auto">
+
+                    <span onClick={(e)=>{e.preventDefault();props.setTheme()}} className="d-flex d-sm-none ml-auto">
+                        
                     <i style={{cursor:"pointer" ,color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} 
                     className={`fas fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
                     </span>
