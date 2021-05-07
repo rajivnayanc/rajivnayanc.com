@@ -1,49 +1,170 @@
-import React from 'react'
+import React from 'react';
+import {ContainerDiv, CardDiv} from './ExperienceStyledComponents';
+
+const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+const Card = (props)=>{
+    const data = props.data;
+    if(!data)return(<></>);
+    const genDate = (time)=>{
+        let output = "";
+        output += `${Months[time.start.month-1]}, ${time.start.year}`;
+        if(time.end){
+            if(time.end === 'Present'){
+                output += ' - Present';
+            }else{
+                output += ` - ${Months[time.end.month-1]}, ${time.end.year}`
+            }
+        }
+
+        return output
+    }
+    return(
+        <CardDiv className="row w-100">
+            <div className="col-12">
+                <h4>{data.role}</h4>
+                <h4 style={{fontWeight:'lighter'}}>{data.location}</h4>
+                <h6 style={{fontWeight:'lighter'}}><i style={{color:"#007BFF"}} className="mr-2 fa fa-calendar"></i>{genDate(data.time)}</h6>
+                <p style={{fontWeight:'500'}} className="mt-3">{data.description}</p>
+            </div>
+        </CardDiv>
+    );
+}
 
 function ExperiencePage() {
-    return (
-        <>
-            <h1>My Experiences</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat fringilla libero quis feugiat. Donec augue lorem, laoreet in velit quis, mollis euismod arcu. Fusce laoreet a tellus nec cursus. Nam quis dolor vestibulum ligula lobortis porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras placerat lectus ex, a maximus magna dignissim lacinia. Quisque mi nibh, eleifend ac nibh auctor, consectetur fermentum lorem. Nunc dictum gravida nulla eu porttitor. Donec ex mauris,
-            cursus sit amet mattis a, elementum ut eros. Pellentesque dapibus tempor sem at pretium.</p>
+    const ExperienceData = [
+        {
+            role:'Summer Intern (SDE)',
+            time:{
+                start:{
+                    month:5,
+                    year:2020
+                },
+                end:{
+                    month:6,
+                    year:2020
+                }
+            },
+            location: 'Goldman Sachs',
+            description:'Worked on PoC of Digitization of documents',
+            type:'professional'
+        },
+        {
+            role:'Co-Founder and Technical Head',
+            time:{
+                start:{
+                    month:11,
+                    year:2018
+                },
+                end:{
+                    month:1,
+                    year:2021
+                }
+            },
+            location: 'Campus Adda',
+            description:'A small startup by group of four members of IIIT-NR. We sold hoodies and T-shirts to college students. Our startup was recognized by MorRaipur and Raipur Mayor. Sold hundreds of merchandise of various types. Built website to take merchandise orders. Website was able to take 300-350 orders within college.',
+            type:'professional'
+        },
+        {
+            role:'Seasonal Intern (SDE)',
+            time:{
+                start:{
+                    month:1,
+                    year:2021
+                },
+                end:'Present'
+            },
+            location: 'Goldman Sachs',
+            description:'Working on Digitization of documents',
+            type:'professional'
+        },
+        {
+            role:'Co-Founder',
+            time:{
+                start:{
+                    month:5,
+                    year:2018
+                }
+            },
+            location: 'The Society of Coders, IIIT-Naya Raipur',
+            description:'Co-Founded the first Coding Society of IIIT Naya Raipur. Organized and hosted various events under TSoC.',
+            type:'volunteer'
+        },
+        {
+            role:'Student Coordinator',
+            time:{
+                start:{
+                    month:2,
+                    year:2019
+                }
+            },
+            location: 'SciNtfic, IIIT-Naya Raipur',
+            description:'Organised two-day technology fest for school students under IIIT Naya Raipur. With the help of team, managed 400 school students from across the cities. Also, we built various technical galleries along with lectures for school students.',
+            type:'volunteer'
+        },
+        {
+            role:'Event Coordinator',
+            time:{
+                start:{
+                    month:3,
+                    year:2019
+                }
+            },
+            location: 'Technovate\'19, IIIT-Naya Raipur',
+            description:'Planned and Organized Coding+Puzzle Event \'Puzzle Express\' for techfest of the institute.',
+            type:'volunteer'
+        },
+        {
+            role:'Web Development Lead',
+            time:{
+                start:{
+                    month:10,
+                    year:2019
+                },
+                end:{
+                    month:3,
+                    year:2020
+                }
+            },
+            location: 'Technovate\'20, IIIT-Naya Raipur',
+            description:'Built, hosted, and maintained the website of Technovate\'20 techfest of IIIT, Naya Raipur with the team of three members. The website was built using Django and was hosted from scratch on Linux Server provided by Institute. The admins were abel to add, modify, and delete the contents of website using CMS portals without developer intervention. Before corona hit, the website was able to serve multitude of requests from all across India.',
+            type:'volunteer'
+        },
+        
 
-            <p>
-                Proin neque orci, commodo nec magna quis, tempus feugiat orci. Nulla at tempor sem, vel posuere turpis. 
-                Fusce quis lacus feugiat, pellentesque lectus eget, accumsan libero. Quisque nulla sem, interdum a ligula eu, 
-                suscipit gravida dolor. Sed molestie et urna malesuada gravida. In nunc eros, malesuada ut quam vel, euismod 
-                consequat dui. Maecenas non volutpat leo. Nulla id fringilla ligula. Nunc metus velit, condimentum ut sapien 
-                at, ornare vehicula odio. Proin tincidunt venenatis massa in consectetur. Quisque convallis, arcu et finibus 
-                eleifend, mi orci dapibus tortor, non porttitor neque neque in dolor. Mauris dictum varius faucibus. Phasellus 
-                id volutpat sapien. Sed a interdum quam.
-            </p>
-            <p>
-                Integer nec massa commodo, sagittis nisl sed, mattis felis. Quisque suscipit gravida maximus. Vestibulum non metus 
-                mauris. Suspendisse libero eros, viverra id nunc sit amet, auctor scelerisque magna. Vestibulum urna augue, sodales
-                 eu mauris eu, tempus malesuada ligula. Nulla imperdiet est a placerat faucibus. Duis sit amet turpis vel nisi feugiat 
-                 laoreet et vel magna. Praesent id nisl et justo varius suscipit. Class aptent taciti sociosqu ad litora torquent per 
-                 conubia nostra, per inceptos himenaeos. Cras tincidunt ligula vel condimentum luctus. Nunc ipsum lorem, porta a 
-                 tortor in, pretium mattis odio. Nullam sapien tellus, consequat at hendrerit quis, volutpat ut arcu. Pellentesque 
-                 laoreet est eu metus ullamcorper, auctor sollicitudin lorem condimentum. Integer convallis, augue et malesuada faucibus, 
-                 tellus ligula consectetur orci, vitae scelerisque lorem tortor a felis. Quisque fringilla cursus eros, semper congue 
-                 sapien porta sit amet. Morbi tellus metus, pulvinar ut orci in, facilisis efficitur ligula.
-            </p>
-            <p>
-                Sed accumsan aliquet elit, eu faucibus elit tempus ac. Duis ultrices semper sapien eu porta. Curabitur ac accumsan orci.
-                Etiam lobortis odio turpis, id sollicitudin lacus ultrices sed. Sed dapibus tortor commodo mauris varius fringilla. Sed
-                tristique dictum facilisis. Nullam dignissim arcu diam, eleifend sagittis lectus ultrices a. Nam et nisl hendrerit, 
-                mattis leo sit amet, placerat sem. Nunc aliquam efficitur nulla in consectetur. Quisque ullamcorper malesuada justo, 
-                eget iaculis justo dictum porttitor. Pellentesque est ex, rutrum eget feugiat eget, porttitor vel sem. Ut lobortis leo 
-                sit amet nunc congue, vel dapibus nisi pulvinar. Pellentesque mattis libero vitae tellus volutpat, et elementum nibh
-                volutpat. Donec porta lobortis interdum. Nullam et tincidunt augue. Lorem ipsum dolor sit amet, consectetur adipiscing 
-                elit.
-            </p>
-            <p>
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas finibus tristique lorem 
-                eu porta. Phasellus dolor nibh, auctor eu accumsan lobortis, rhoncus mollis odio. Phasellus nec lacus sit amet mauris 
-                euismod gravida ac non ex. Fusce scelerisque nulla et diam euismod blandit. Nunc porta ut dolor ac varius. Vivamus bibendum 
-                nisl nec ullamcorper ullamcorper.
-            </p>
-        </>
+    ];
+
+    const ProfessionalExperience = ExperienceData.filter((value)=>value.type==='professional');
+    const OtherExperience = ExperienceData.filter((value)=>value.type!=='professional');
+    const compare = (a,b)=>{
+        if(a.time.start.year!==b.time.start.year){
+            return b.time.start.year-a.time.start.year;
+        }else{
+            return b.time.start.month-a.time.start.month;
+        }
+    }
+    ProfessionalExperience.sort(compare);
+    OtherExperience.sort(compare);
+
+    const ProExpDataList = ProfessionalExperience.map((data, ind)=><Card key={ind} data={data}/>);
+    const OtherExoDataList = OtherExperience.map((data, ind)=><Card key={ind} data={data}/>);
+
+    return (
+        <ContainerDiv className="container-fluid d-flex flex-column align-items-center justify-content-center">
+            <div className="row p-0 m-0 w-100 d-flex flex-row align-items-start justify-content-center">
+                <div className="p-0 col-12 col-sm-8 d-flex flex-column align-items-center justify-content-center">
+                    <h1>My Experiences <i className="fa fa-suitcase" style={{color:"green"}}></i></h1>
+                    {ProExpDataList.length>0?<h3 className="mt-3 align-self-start">Professional Experiences</h3>:''}
+                    
+                    {ProExpDataList}
+                    
+                    {OtherExoDataList.length>0?<h3 className="mt-5 align-self-start">Volunteering and Other Experiences</h3>:''}
+                    
+                    {OtherExoDataList}
+                    
+                </div>
+            </div>
+        </ContainerDiv>
     )
 }
 

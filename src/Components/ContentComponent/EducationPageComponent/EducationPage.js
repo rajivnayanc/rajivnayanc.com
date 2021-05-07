@@ -53,7 +53,7 @@ function EducationPage() {
         
     ]
     EducationData.sort((a,b)=>b.time.start-a.time.start);
-    const dataList = EducationData.map((data, ind)=><Card ley = {ind} data={data}/>)
+    const dataList = EducationData.map((data, ind)=><Card key = {ind} data={data}/>)
     return (
         <ContainerDiv className="container-fluid d-flex flex-column align-items-center justify-content-center">
             <div className="row p-0 m-0 w-100 d-flex flex-row align-items-start justify-content-center">
