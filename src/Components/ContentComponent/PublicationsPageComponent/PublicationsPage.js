@@ -12,7 +12,7 @@ const Card = (props)=>{
             <div className="col-12">
                 <h5>{data.title} <a target="__blank__" href={data.link}><i className="fa fa-external-link-alt"></i></a></h5>
                 <h6>{data[data.type]}, {data.publisher}</h6>
-                <p><i className="fa fa-calendar"></i> {data.year}</p>
+                <p><i className="fa fa-calendar mr-2"></i> {data.year}</p>
                 {authors}
             </div>
         </CardDiv>

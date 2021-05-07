@@ -1,49 +1,92 @@
-import React from 'react'
+import React from 'react';
+import {ContainerDiv, CardDiv, Tag} from './ProjectsStyledComponents';
 
-function ProjectsPage() {
+import ProjectList from './ProjectList';
+
+const CardFeatured = (props)=>{
+    const data = props.data;
+    if(!data)return(<></>);
+
+    const github = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a>:<></>;
+    const hosted = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a>:<></>;
+    const report = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-2 mr-1 fa fa-book"></i></a>:<></>;
+    const techstacks = data.techstack.map((val, ind)=> <Tag key = {ind}>{val}</Tag>)
+    return(
+        <CardDiv className="row w-100">
+            <div className="col-12 col-sm-6 d-flex flex-row align-item-center justify-content-center">
+                <img className="align-self-center" style={{width:"95%"}} src={data.image} alt= "Project Report"/> 
+            </div>
+            <div className="col-12 col-sm-6 mt-2 mt-sm-0 d-flex flex-column align-item-center justify-content-start">
+                <h5 className="w-100">{data.title} {github}{hosted}{report}</h5>
+                <p>{data.desc}</p>
+                <div className="mt-auto">
+                {techstacks}
+                </div>
+            </div>
+        </CardDiv>
+    );
+}
+const CardOther = (props)=>{
+    const data = props.data;
+    if(!data)return(<></>);
+
+    const github = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a>:<></>;
+    const hosted = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a>:<></>;
+    const report = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-2 mr-1 fa fa-book"></i></a>:<></>;
+    const techstacks = data.techstack.map((val, ind)=> <Tag key = {ind}>{val}</Tag>)
+    return(
+        <CardDiv className="row w-100">
+            <div className="col-12 h-100 d-flex flex-column justify-content-start">
+                <h6 className="w-100">{data.title} {github}{hosted}{report}</h6>
+                <p>{data.desc}</p>
+                <div className="mt-auto">
+                {techstacks}
+                </div>
+            </div>
+        </CardDiv>
+    );
+}
+
+const FeaturedProjectCard = (props)=>{
     return (
-        <>
-            <h1>My Projects</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat fringilla libero quis feugiat. Donec augue lorem, laoreet in velit quis, mollis euismod arcu. Fusce laoreet a tellus nec cursus. Nam quis dolor vestibulum ligula lobortis porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras placerat lectus ex, a maximus magna dignissim lacinia. Quisque mi nibh, eleifend ac nibh auctor, consectetur fermentum lorem. Nunc dictum gravida nulla eu porttitor. Donec ex mauris,
-            cursus sit amet mattis a, elementum ut eros. Pellentesque dapibus tempor sem at pretium.</p>
-
-            <p>
-                Proin neque orci, commodo nec magna quis, tempus feugiat orci. Nulla at tempor sem, vel posuere turpis. 
-                Fusce quis lacus feugiat, pellentesque lectus eget, accumsan libero. Quisque nulla sem, interdum a ligula eu, 
-                suscipit gravida dolor. Sed molestie et urna malesuada gravida. In nunc eros, malesuada ut quam vel, euismod 
-                consequat dui. Maecenas non volutpat leo. Nulla id fringilla ligula. Nunc metus velit, condimentum ut sapien 
-                at, ornare vehicula odio. Proin tincidunt venenatis massa in consectetur. Quisque convallis, arcu et finibus 
-                eleifend, mi orci dapibus tortor, non porttitor neque neque in dolor. Mauris dictum varius faucibus. Phasellus 
-                id volutpat sapien. Sed a interdum quam.
-            </p>
-            <p>
-                Integer nec massa commodo, sagittis nisl sed, mattis felis. Quisque suscipit gravida maximus. Vestibulum non metus 
-                mauris. Suspendisse libero eros, viverra id nunc sit amet, auctor scelerisque magna. Vestibulum urna augue, sodales
-                 eu mauris eu, tempus malesuada ligula. Nulla imperdiet est a placerat faucibus. Duis sit amet turpis vel nisi feugiat 
-                 laoreet et vel magna. Praesent id nisl et justo varius suscipit. Class aptent taciti sociosqu ad litora torquent per 
-                 conubia nostra, per inceptos himenaeos. Cras tincidunt ligula vel condimentum luctus. Nunc ipsum lorem, porta a 
-                 tortor in, pretium mattis odio. Nullam sapien tellus, consequat at hendrerit quis, volutpat ut arcu. Pellentesque 
-                 laoreet est eu metus ullamcorper, auctor sollicitudin lorem condimentum. Integer convallis, augue et malesuada faucibus, 
-                 tellus ligula consectetur orci, vitae scelerisque lorem tortor a felis. Quisque fringilla cursus eros, semper congue 
-                 sapien porta sit amet. Morbi tellus metus, pulvinar ut orci in, facilisis efficitur ligula.
-            </p>
-            <p>
-                Sed accumsan aliquet elit, eu faucibus elit tempus ac. Duis ultrices semper sapien eu porta. Curabitur ac accumsan orci.
-                Etiam lobortis odio turpis, id sollicitudin lacus ultrices sed. Sed dapibus tortor commodo mauris varius fringilla. Sed
-                tristique dictum facilisis. Nullam dignissim arcu diam, eleifend sagittis lectus ultrices a. Nam et nisl hendrerit, 
-                mattis leo sit amet, placerat sem. Nunc aliquam efficitur nulla in consectetur. Quisque ullamcorper malesuada justo, 
-                eget iaculis justo dictum porttitor. Pellentesque est ex, rutrum eget feugiat eget, porttitor vel sem. Ut lobortis leo 
-                sit amet nunc congue, vel dapibus nisi pulvinar. Pellentesque mattis libero vitae tellus volutpat, et elementum nibh
-                volutpat. Donec porta lobortis interdum. Nullam et tincidunt augue. Lorem ipsum dolor sit amet, consectetur adipiscing 
-                elit.
-            </p>
-            <p>
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas finibus tristique lorem 
-                eu porta. Phasellus dolor nibh, auctor eu accumsan lobortis, rhoncus mollis odio. Phasellus nec lacus sit amet mauris 
-                euismod gravida ac non ex. Fusce scelerisque nulla et diam euismod blandit. Nunc porta ut dolor ac varius. Vivamus bibendum 
-                nisl nec ullamcorper ullamcorper.
-            </p>
-        </>
+        <div className="p-2 col-12 d-flex flex-column align-items-center justify-content-center">
+            <CardFeatured style={{flex:1}} data={props.data}/>
+        </div>
+    )
+}
+const OtherProjectCard = (props)=>{
+    return (
+        <div className="p-2 col-12 col-sm-6 col-xl-4 d-flex flex-column align-items-center justify-content-center">
+            <CardOther style={{flex:1}} data={props.data}/>
+        </div>
+    )
+}
+function ProjectsPage() {
+    
+    const featuredProjects = ProjectList.filter(val=>val.featured);
+    const otherProjects = ProjectList.filter(val=>!val.featured);
+    const FeaturedProjectTags = featuredProjects.map((data, ind)=><FeaturedProjectCard key={ind} data={data}/>)
+    const OtherProjectTags = otherProjects.map((data, ind)=><OtherProjectCard key={ind} data={data}/>)
+    return (
+        <ContainerDiv className="container-fluid d-flex flex-column align-items-center justify-content-center">
+            <div className="row p-0 m-0 w-100 d-flex flex-row align-items-start justify-content-center">
+                <div className="p-0 col-12 d-flex flex-column align-items-center justify-content-center">
+                    <h1 style={{fontWeight:400}}>My Projects<i style={{color:"yellow"}} className="ml-2 fas fa-fire"></i></h1>
+                </div>
+            </div>
+            <div className="row p-0 m-0 mt-5 w-100 justify-content-center">
+                <div className="col-12">
+                    <h4 style={{fontWeight:'lighter'}}>Featured Projects</h4>
+                </div>
+                {FeaturedProjectTags}
+            </div>
+            <div className="row p-0 m-0 mt-5 w-100 justify-content-center">
+                <div className="col-12">
+                    <h4 style={{fontWeight:'lighter'}}>Other Awesome Projects</h4>
+                </div>
+                {OtherProjectTags}
+            </div>
+        </ContainerDiv>
     )
 }
 

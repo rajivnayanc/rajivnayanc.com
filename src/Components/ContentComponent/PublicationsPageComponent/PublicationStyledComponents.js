@@ -41,5 +41,9 @@ export const AuthorLink = styled.a`
         content:"  •  ";
         height 2px;
         border-radius: 50%:
+        color:var(--text-primary);
+    }
+    &:hover:not(:last-child):after{
+        color:var(--text-primary);
     }
 `;

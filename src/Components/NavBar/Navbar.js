@@ -87,19 +87,19 @@ function NavBar(props) {
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <a rel="noreferrer" target="_blank" href="https://github.com/rajivnayanc" className="nav-link">
-                            <i className="fa fa-github"></i>
+                            <i className="fab fa-github"></i>
                             <span className="link-text">Github</span>
                         </a>
                     </li>
                     <li className="nav-item">
                         <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/rajivnayanc/" className="nav-link">
-                            <i className="fa fa-linkedin"></i>
+                            <i className="fab fa-linkedin"></i>
                             <span className="link-text">LinkedIn</span>
                         </a>
                     </li>
                     <li className="nav-item">
                         <a rel="noreferrer" target="_blank" href="https://twitter.com/rajivnayanc" className="nav-link">
-                            <i className="fa fa-twitter"></i>
+                            <i className="fab fa-twitter"></i>
                             <span className="link-text">Twitter</span>
                         </a>
                     </li>
