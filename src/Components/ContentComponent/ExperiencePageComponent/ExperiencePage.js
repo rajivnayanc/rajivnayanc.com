@@ -62,7 +62,7 @@ function ExperiencePage() {
                 }
             },
             location: 'Campus Adda',
-            description:'A small startup by group of four members of IIIT-NR. We sold hoodies and T-shirts to college students. Our startup was recognized by MorRaipur and Raipur Mayor. Sold hundreds of merchandise of various types. Built website to take merchandise orders. Website was able to take 300-350 orders within college.',
+            description:'A small startup by a group of four members of IIIT-NR. We sold hoodies and T-shirts to college students. Our startup was recognized by MorRaipur and Raipur Mayor. Sold hundreds of merchandise of various types. Built website to take merchandise orders. The website was able to take 300-350 orders within the institute.',
             type:'professional'
         },
         {
@@ -127,7 +127,7 @@ function ExperiencePage() {
                 }
             },
             location: 'Technovate\'20, IIIT-Naya Raipur',
-            description:'Built, hosted, and maintained the website of Technovate\'20 techfest of IIIT, Naya Raipur with the team of three members. The website was built using Django and was hosted from scratch on Linux Server provided by Institute. The admins were abel to add, modify, and delete the contents of website using CMS portals without developer intervention. Before corona hit, the website was able to serve multitude of requests from all across India.',
+            description:'Built, hosted, and maintained the website of Technovate\'20 technical festival of IIIT, Naya Raipur with a team of three members. The website was built using Django and was hosted from scratch on Linux Server provided by Institute. The admins were able to add, modify, and delete the contents of the website using CMS portals without developer intervention. Before corona hit, the website was able to serve a multitude of requests from all across India.',
             type:'volunteer'
         },
         
