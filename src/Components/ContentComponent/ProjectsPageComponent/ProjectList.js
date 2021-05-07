@@ -1,4 +1,5 @@
 import logo from './images/test.jpg';
+import logo2 from './images/test2.jpg';
 
 const ProjectList = [
     {
@@ -19,7 +20,7 @@ const ProjectList = [
         techstack : ['C++', 'Python', 'Java'],
         desc: 'Converts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into Images',
         featured:true,
-        image:logo
+        image:logo2
     },
     {
         title : 'NeuroVision',
@@ -49,7 +50,7 @@ const ProjectList = [
         techstack : ['C++', 'Python', 'Java'],
         desc: 'Converts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into ImagesConverts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into Images',
         featured:true,
-        image:logo
+        image:logo2
     },
     {
         title : '3D Rasterizer',

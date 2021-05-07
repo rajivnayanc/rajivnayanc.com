@@ -6,8 +6,18 @@ import './navbarstyles.css';
 
 function NavBar(props) {
     const [navMenuExpanded, setNavMenuExpanded] = useState(false);
+    const handleDocClick = (e)=>{
+        const navbarContainer = document.getElementById('navbarContainer');
+        if (e.target !== navbarContainer && !navbarContainer.contains(e.target)) {
+            setNavMenuExpanded(false);
+            document.removeEventListener('click', handleDocClick, true);
+        }
+    }
     const toggleNavBarMenu = (e)=>{
         e.preventDefault();
+        if(!navMenuExpanded){
+            document.addEventListener('click', handleDocClick, true);
+        }
         setNavMenuExpanded(!navMenuExpanded);
     }
 
@@ -15,7 +25,7 @@ function NavBar(props) {
         setNavMenuExpanded(false);
     }
     return (
-        <div className="navbar">
+        <div id="navbarContainer" className="navbar">
             {/* Header with Brand Name */}
             <div className="logo">
                 <Link className="nav-link logo-link" to = "/">

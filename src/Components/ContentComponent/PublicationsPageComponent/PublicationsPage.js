@@ -5,7 +5,7 @@ const Card = (props)=>{
     const data = props.data;
     if(!data)return(<></>);
     const authors = data.authors.map((author, ind)=>(
-        <AuthorLink key={ind} href={author.profile}>{author.name}</AuthorLink>
+        <AuthorLink target="__blank__" key={ind} href={author.profile}>{author.name}</AuthorLink>
     ))
     return(
         <CardDiv className="row w-100">
