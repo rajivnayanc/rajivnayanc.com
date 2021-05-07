@@ -1,49 +1,74 @@
-import React from 'react'
+import React from 'react';
+import {ContainerDiv, CardDiv, AuthorLink} from './PublicationStyledComponents';
 
+const Card = (props)=>{
+    const data = props.data;
+    if(!data)return(<></>);
+    const authors = data.authors.map((author, ind)=>(
+        <AuthorLink key={ind} href={author.profile}>{author.name}</AuthorLink>
+    ))
+    return(
+        <CardDiv className="row w-100">
+            <div className="col-12">
+                <h5>{data.title} <a target="__blank__" href={data.link}><i className="fa fa-external-link-alt"></i></a></h5>
+                <h6>{data[data.type]}, {data.publisher}</h6>
+                <p><i className="fa fa-calendar"></i> {data.year}</p>
+                {authors}
+            </div>
+        </CardDiv>
+    );
+}
 function PublicationsPage() {
-    return (
-        <>
-            <h1>My Publications</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat fringilla libero quis feugiat. Donec augue lorem, laoreet in velit quis, mollis euismod arcu. Fusce laoreet a tellus nec cursus. Nam quis dolor vestibulum ligula lobortis porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras placerat lectus ex, a maximus magna dignissim lacinia. Quisque mi nibh, eleifend ac nibh auctor, consectetur fermentum lorem. Nunc dictum gravida nulla eu porttitor. Donec ex mauris,
-            cursus sit amet mattis a, elementum ut eros. Pellentesque dapibus tempor sem at pretium.</p>
+    const PublicationData = [
+        {
+            title:'Internet Traffic Classifier Using Artificial Neural Network and 1D-CNN',
+            link:'https://ieeexplore.ieee.org/document/9031882',
+            year:2019,
+            type:'conference',
+            publisher:'IEEE',
+            conference:'International Conference on Information Technology (ICIT)' ,
+            authors:[
+                {
+                    name:'Rajiv Nayan Choubey',
+                    profile:'https://www.linkedin.com/in/rajivnayanc/'
+                },
+                {
+                    name:'Loveleen Amar',
+                    profile:'https://www.linkedin.com/in/loveleen-amar/'
+                },
+                {
+                    name:'Sanchita Khare',
+                    profile:'https://www.linkedin.com/in/sanchita-khare/'
+                },
+                {
+                    name:'Venkanna U',
+                    profile:'https://www.linkedin.com/in/venkanna-uduthalapally-1749a6143/'
+                },
+            ]
+        }
+    ];
 
-            <p>
-                Proin neque orci, commodo nec magna quis, tempus feugiat orci. Nulla at tempor sem, vel posuere turpis. 
-                Fusce quis lacus feugiat, pellentesque lectus eget, accumsan libero. Quisque nulla sem, interdum a ligula eu, 
-                suscipit gravida dolor. Sed molestie et urna malesuada gravida. In nunc eros, malesuada ut quam vel, euismod 
-                consequat dui. Maecenas non volutpat leo. Nulla id fringilla ligula. Nunc metus velit, condimentum ut sapien 
-                at, ornare vehicula odio. Proin tincidunt venenatis massa in consectetur. Quisque convallis, arcu et finibus 
-                eleifend, mi orci dapibus tortor, non porttitor neque neque in dolor. Mauris dictum varius faucibus. Phasellus 
-                id volutpat sapien. Sed a interdum quam.
-            </p>
-            <p>
-                Integer nec massa commodo, sagittis nisl sed, mattis felis. Quisque suscipit gravida maximus. Vestibulum non metus 
-                mauris. Suspendisse libero eros, viverra id nunc sit amet, auctor scelerisque magna. Vestibulum urna augue, sodales
-                 eu mauris eu, tempus malesuada ligula. Nulla imperdiet est a placerat faucibus. Duis sit amet turpis vel nisi feugiat 
-                 laoreet et vel magna. Praesent id nisl et justo varius suscipit. Class aptent taciti sociosqu ad litora torquent per 
-                 conubia nostra, per inceptos himenaeos. Cras tincidunt ligula vel condimentum luctus. Nunc ipsum lorem, porta a 
-                 tortor in, pretium mattis odio. Nullam sapien tellus, consequat at hendrerit quis, volutpat ut arcu. Pellentesque 
-                 laoreet est eu metus ullamcorper, auctor sollicitudin lorem condimentum. Integer convallis, augue et malesuada faucibus, 
-                 tellus ligula consectetur orci, vitae scelerisque lorem tortor a felis. Quisque fringilla cursus eros, semper congue 
-                 sapien porta sit amet. Morbi tellus metus, pulvinar ut orci in, facilisis efficitur ligula.
-            </p>
-            <p>
-                Sed accumsan aliquet elit, eu faucibus elit tempus ac. Duis ultrices semper sapien eu porta. Curabitur ac accumsan orci.
-                Etiam lobortis odio turpis, id sollicitudin lacus ultrices sed. Sed dapibus tortor commodo mauris varius fringilla. Sed
-                tristique dictum facilisis. Nullam dignissim arcu diam, eleifend sagittis lectus ultrices a. Nam et nisl hendrerit, 
-                mattis leo sit amet, placerat sem. Nunc aliquam efficitur nulla in consectetur. Quisque ullamcorper malesuada justo, 
-                eget iaculis justo dictum porttitor. Pellentesque est ex, rutrum eget feugiat eget, porttitor vel sem. Ut lobortis leo 
-                sit amet nunc congue, vel dapibus nisi pulvinar. Pellentesque mattis libero vitae tellus volutpat, et elementum nibh
-                volutpat. Donec porta lobortis interdum. Nullam et tincidunt augue. Lorem ipsum dolor sit amet, consectetur adipiscing 
-                elit.
-            </p>
-            <p>
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas finibus tristique lorem 
-                eu porta. Phasellus dolor nibh, auctor eu accumsan lobortis, rhoncus mollis odio. Phasellus nec lacus sit amet mauris 
-                euismod gravida ac non ex. Fusce scelerisque nulla et diam euismod blandit. Nunc porta ut dolor ac varius. Vivamus bibendum 
-                nisl nec ullamcorper ullamcorper.
-            </p>
-        </>
+    const ConferencePublications = PublicationData.filter((value)=>value.type==='conference');
+    const JournalPublications = PublicationData.filter((value)=>value.type==='journal');
+
+    ConferencePublications.sort((a,b)=>b.year-a.year);
+    JournalPublications.sort((a,b)=>b.year-a.year);
+
+    const ConferenceDataList = ConferencePublications.map((data, ind)=><Card key={ind} data={data}/>);
+    const JournalDataList = JournalPublications.map((data, ind)=><Card key={ind} data={data}/>);
+
+    return (
+        <ContainerDiv className="container-fluid d-flex flex-column align-items-center justify-content-center">
+            <div className="row p-0 m-0 w-100 d-flex flex-row align-items-start justify-content-center">
+                <div className="p-0 col-12 col-sm-8 d-flex flex-column align-items-center justify-content-center">
+                    <h1>My Publications <i className="fa fa-newspaper" style={{color:"green"}}></i></h1>
+                    {JournalDataList.length>0?<h3 className="align-self-start">Journals</h3>:''}
+                    {JournalDataList}
+                    {ConferenceDataList.length>0?<h3 className="align-self-start">Conferences</h3>:''}
+                    {ConferenceDataList}
+                </div>
+            </div>
+        </ContainerDiv>
     )
 }
 
