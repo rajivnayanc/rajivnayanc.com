@@ -1,5 +1,6 @@
 import React from 'react';
 import {ContainerDiv, CardDiv, AuthorLink} from './PublicationStyledComponents';
+import {PublicationData} from '../../../shared/ProfileInfo';
 
 const Card = (props)=>{
     const data = props.data;
@@ -19,34 +20,6 @@ const Card = (props)=>{
     );
 }
 function PublicationsPage() {
-    const PublicationData = [
-        {
-            title:'Internet Traffic Classifier Using Artificial Neural Network and 1D-CNN',
-            link:'https://ieeexplore.ieee.org/document/9031882',
-            year:2019,
-            type:'conference',
-            publisher:'IEEE',
-            conference:'International Conference on Information Technology (ICIT)' ,
-            authors:[
-                {
-                    name:'Rajiv Nayan Choubey',
-                    profile:'https://www.linkedin.com/in/rajivnayanc/'
-                },
-                {
-                    name:'Loveleen Amar',
-                    profile:'https://www.linkedin.com/in/loveleen-amar/'
-                },
-                {
-                    name:'Sanchita Khare',
-                    profile:'https://www.linkedin.com/in/sanchita-khare/'
-                },
-                {
-                    name:'Venkanna U',
-                    profile:'https://www.linkedin.com/in/venkanna-uduthalapally-1749a6143/'
-                },
-            ]
-        }
-    ];
 
     const ConferencePublications = PublicationData.filter((value)=>value.type==='conference');
     const JournalPublications = PublicationData.filter((value)=>value.type==='journal');

@@ -4,6 +4,7 @@ import {ContainerDiv, Button, TagLineDiv, PCustom, PhotoDiv, StyleImgTag} from '
 import profilePhoto from '../../../images/profilePic/rajiv.png';
 import Typed from 'react-typed';
 import {Links} from '../../../shared/links';
+import {TagLines} from '../../../shared/ProfileInfo';
 
 function HomePage(props) {
     return (
@@ -26,12 +27,7 @@ function HomePage(props) {
                        <PCustom color="white" minsize="30px" maxsize="70px" size="8vw" weight="700">
                            Rajiv Nayan Choubey 
                         </PCustom>
-                        <Typed strings={[
-                                "I am a Computer Engineer",
-                                "I am a Developer",
-                                "I am a Coder",
-                                "I am a Learner",
-                            ]}
+                        <Typed strings={TagLines}
                             typeSpeed={40}
                             backSpeed={50}
                             loop>

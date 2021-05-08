@@ -1,5 +1,6 @@
 import React from 'react';
 import {ContainerDiv, CardDiv} from './ExperienceStyledComponents';
+import {ExperienceData} from '../../../shared/ProfileInfo';
 
 const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -32,107 +33,7 @@ const Card = (props)=>{
 }
 
 function ExperiencePage() {
-    const ExperienceData = [
-        {
-            role:'Summer Intern (SDE)',
-            time:{
-                start:{
-                    month:5,
-                    year:2020
-                },
-                end:{
-                    month:6,
-                    year:2020
-                }
-            },
-            location: 'Goldman Sachs',
-            description:'Worked on PoC of Digitization of documents',
-            type:'professional'
-        },
-        {
-            role:'Co-Founder and Technical Head',
-            time:{
-                start:{
-                    month:11,
-                    year:2018
-                },
-                end:{
-                    month:1,
-                    year:2021
-                }
-            },
-            location: 'Campus Adda',
-            description:'A small startup by a group of four members of IIIT-NR. We sold hoodies and T-shirts to college students. Our startup was recognized by MorRaipur and Raipur Mayor. Sold hundreds of merchandise of various types. Built website to take merchandise orders. The website was able to take 300-350 orders within the institute.',
-            type:'professional'
-        },
-        {
-            role:'Seasonal Intern (SDE)',
-            time:{
-                start:{
-                    month:1,
-                    year:2021
-                },
-                end:'Present'
-            },
-            location: 'Goldman Sachs',
-            description:'Working on Digitization of documents',
-            type:'professional'
-        },
-        {
-            role:'Co-Founder',
-            time:{
-                start:{
-                    month:5,
-                    year:2018
-                }
-            },
-            location: 'The Society of Coders, IIIT-Naya Raipur',
-            description:'Co-Founded the first Coding Society of IIIT Naya Raipur. Organized and hosted various events under TSoC.',
-            type:'volunteer'
-        },
-        {
-            role:'Student Coordinator',
-            time:{
-                start:{
-                    month:2,
-                    year:2019
-                }
-            },
-            location: 'SciNtfic, IIIT-Naya Raipur',
-            description:'Organised two-day technology fest for school students under IIIT Naya Raipur. With the help of team, managed 400 school students from across the cities. Also, we built various technical galleries along with lectures for school students.',
-            type:'volunteer'
-        },
-        {
-            role:'Event Coordinator',
-            time:{
-                start:{
-                    month:3,
-                    year:2019
-                }
-            },
-            location: 'Technovate\'19, IIIT-Naya Raipur',
-            description:'Planned and Organized Coding+Puzzle Event \'Puzzle Express\' for techfest of the institute.',
-            type:'volunteer'
-        },
-        {
-            role:'Web Development Lead',
-            time:{
-                start:{
-                    month:10,
-                    year:2019
-                },
-                end:{
-                    month:3,
-                    year:2020
-                }
-            },
-            location: 'Technovate\'20, IIIT-Naya Raipur',
-            description:'Built, hosted, and maintained the website of Technovate\'20 technical festival of IIIT, Naya Raipur with a team of three members. The website was built using Django and was hosted from scratch on Linux Server provided by Institute. The admins were able to add, modify, and delete the contents of the website using CMS portals without developer intervention. Before corona hit, the website was able to serve a multitude of requests from all across India.',
-            type:'volunteer'
-        },
-        
-
-    ];
+    
 
     const ProfessionalExperience = ExperienceData.filter((value)=>value.type==='professional');
     const OtherExperience = ExperienceData.filter((value)=>value.type!=='professional');

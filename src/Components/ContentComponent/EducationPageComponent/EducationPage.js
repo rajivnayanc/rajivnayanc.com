@@ -1,6 +1,6 @@
 import React from 'react'
 import {ContainerDiv, CardDiv} from './EducationStyledComponents';
-
+import {EducationData} from '../../../shared/ProfileInfo';
 const Card = (props)=>{
     const data = props.data;
     if(!data)return(<></>);
@@ -22,36 +22,6 @@ const Card = (props)=>{
     );
 }
 function EducationPage() {
-    const EducationData = [
-        {
-            degree:'B.Tech',
-            major:'CSE',
-            institute:'International Institute of Information Technology, Naya Raipur',
-            time:{
-                start:2017,
-                end: 'present'
-            },
-            score: '9.5 CGPA'
-        },
-        {
-            degree:'Intermediate',
-            major:'PCM, C++',
-            institute:'Glenhill School, Varanasi',
-            time:{
-                start:2016
-            },
-            score: '86.4 %'
-        },
-        {
-            degree:'High School',
-            institute:'Glenhill School, Varanasi',
-            time:{
-                start:2014
-            },
-            score: '10 CGPA'
-        }
-        
-    ]
     EducationData.sort((a,b)=>b.time.start-a.time.start);
     const dataList = EducationData.map((data, ind)=><Card key = {ind} data={data}/>)
     return (

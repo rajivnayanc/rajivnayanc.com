@@ -1,7 +1,7 @@
 import React from 'react';
 import {ContainerDiv, CardDiv, Tag} from './ProjectsStyledComponents';
 
-import ProjectList from './ProjectList';
+import {ProjectList} from '../../../shared/ProfileInfo';
 
 const CardFeatured = (props)=>{
     const data = props.data;
