@@ -6,11 +6,11 @@ export const ContainerDiv = styled.div`
         min-height: calc(100vh - 5rem);
     }
 `;
-export const Button = styled.div`
+export const Button = styled.a`
     display: inline;
     padding: 0;
     margin: 0;
-    background-color: rgb(68, 2, 207);
+    background-color: rgb(0,123,255);
     height:fit-content;
     border: none;
     color: white;
@@ -26,6 +26,8 @@ export const Button = styled.div`
         background-color: rgb(2, 117, 216);
         transform: scale(1.2);
         border-radius: 4px;
+        color: white;
+        text-decoration:none;
     }
 `;
 

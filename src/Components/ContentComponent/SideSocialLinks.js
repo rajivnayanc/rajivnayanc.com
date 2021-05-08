@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Links} from '../../shared/links';
 
 const FixedLinks = styled.div`
     width:fit-content;
@@ -20,17 +21,17 @@ function SideSocialLinks() {
     return (
         <FixedLinks className="row d-block d-sm-none">
                 <div className="col-12">
-                    <LinkAnchor rel="noreferrer" target="_blank" href="https://github.com/rajivnayanc">
+                    <LinkAnchor rel="noreferrer" target="_blank" href={Links.github}>
                         <i className="fab fa-github"></i>
                     </LinkAnchor>
                 </div>
                 <div className="col-12">
-                    <LinkAnchor rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/rajivnayanc/">
+                    <LinkAnchor rel="noreferrer" target="_blank" href={Links.linkedin}>
                         <i className="fab fa-linkedin"></i>
                     </LinkAnchor>
                 </div>
                 <div className="col-12">
-                    <LinkAnchor rel="noreferrer" target="_blank" href="https://twitter.com/rajivnayanc">
+                    <LinkAnchor rel="noreferrer" target="_blank" href={Links.twitter}>
                         <i className="fab fa-twitter"></i>
                     </LinkAnchor>
                 </div>

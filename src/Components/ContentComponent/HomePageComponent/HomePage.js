@@ -3,6 +3,8 @@ import ParticlesJsCanvas from './SubComponents/ParticlesJsCanvas';
 import {ContainerDiv, Button, TagLineDiv, PCustom, PhotoDiv, StyleImgTag} from './SubComponents/HomePageStyleComponents';
 import profilePhoto from '../../../images/profilePic/rajiv.png';
 import Typed from 'react-typed';
+import {Links} from '../../../shared/links';
+
 function HomePage(props) {
     return (
         <>
@@ -13,8 +15,8 @@ function HomePage(props) {
                     <h5>@rajivnayanc</h5>
                 </div>
                 <div className="col-9 d-flex flex-row justify-content-end align-items-center ml-auto">
-                    <Button>Contact Me</Button>
-                    <Button>Resume</Button>
+                    <Button target="__blank__" href={`mailto:${Links.email}`}>Contact Me</Button>
+                    <Button target="__blank__" href={Links.resume}>Resume</Button>
                 </div>
             </div>
             <div className="row d-flex flex-row flex-grow-1 align-items-center justify-content-center">

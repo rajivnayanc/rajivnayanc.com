@@ -1,6 +1,7 @@
 import React from 'react'
 import {ContainerDiv, ImgTag, Tag, TableStyled} from './AboutPageStyleComponents';
 import coderSVG from './images/icon.svg';
+import {Links} from '../../../shared/links';
 
 function AboutPage() {
     // Textual Content Data 
@@ -54,8 +55,8 @@ function AboutPage() {
                     <h1>About Me</h1>
                     {TextContent}
                     <div className="d-flex flex-row justify-content-center w-100">
-                        <button style={{margin:"1rem"}} className="btn btn-success">Contact Me</button>
-                        <button style={{margin:"1rem"}} className="btn btn-success">Resume</button>
+                        <a target="__blank__" href={`mailto:${Links.email}`} style={{margin:"1rem"}} className="btn btn-success">Contact Me</a>
+                        <a target="__blank__" href={Links.resume} style={{margin:"1rem"}} className="btn btn-success">Resume</a>
                     </div>
                 </div>
                 <div className="col-12 mt-1 col-sm-4 p-0 h-100 d-flex justify-content-center">
