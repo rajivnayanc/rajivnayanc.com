@@ -1,5 +1,7 @@
-import logo from './images/test.jpg';
-import logo2 from './images/test2.jpg';
+import neuroface from './images/neuroface.jpg';
+import imagetoascii from './images/imagetoascii.jpg';
+import houseflix from './images/houseflix.png';
+import threeDRayTracer from './images/3dRayTracer.png';
 
 export const TagLines = [
     "I am a Computer Engineer",
@@ -8,28 +10,34 @@ export const TagLines = [
     "I am a Learner",
 ]
 export const aboutMeContent = {
-    heading:'I am a Computer Science Engineer',
+    heading:'Computer Science Engineer by ❤',
     content:[
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat fringilla libero quis feugiat. Donec augue lorem, laoreet in velit quis, mollis euismod arcu. Fusce laoreet a tellus nec cursus. Nam quis dolor vestibulum ligula lobortis porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras placerat lectus ex, a maximus magna dignissim lacinia. Quisque mi nibh, eleifend ac nibh auctor, consectetur fermentum lorem. Nunc dictum gravida nulla eu porttitor. Donec ex mauris,cursus sit amet mattis a, elementum ut eros. Pellentesque dapibus tempor sem at pretium.',
-        'Proin neque orci, commodo nec magna quis, tempus feugiat orci. vel posuere turpis. Fusce quis lacus feugiat, pellentesque lectus eget, accumsan libero. Quisque nulla sem, interdum a ligula eu, suscipit gravida dolor. Sed molestie et urna malesuada gravida. In nunc eros, malesuada ut quam vel, euismod consequat dui. Maecenas non volutpat leo. Nulla id fringilla ligula. Nunc metus velit, condimentum ut sapien at, ornare vehicula odio. Proin tincidunt venenatis massa in consectetur. Quisque convallis, arcu et finibus eleifend, mi orci dapibus tortor, non porttitor neque neque in dolor. Mauris dictum varius faucibus. Phasellus id volutpat sapien. Sed a interdum quam.'
+        'Hello Everyone! My name is Rajiv Nayan Choubey. I am an aspiring Computer Science Engineer and Researcher. The CPU clock cycle ticks me. I am inclined towards Web Development and Artificial Intelligence. I am also developing my interests in the field of Computer Graphics and other core CS areas. Building things from scratch interests me the most.',
+        'Favourite Quoute:',
+        '"What I cannot create, I cannot understand " - Richard Feynman'
     ]
 };
 
 export const skillSets = {
     'Languages':[
-        'C++',
+        'C/C++',
         'Python',
-        'JavaScript'
+        'JavaScript',
+        'Java'
     ],
-    'Framework':[
+    'Framework & Libraries':[
         'Node.js',
         'Django',
+        'ReactJs',
         'PyTorch',
-        'Tensorflow'
+        'Tensorflow',
     ],
-    'Tools':[
-        'Adobe Photoshop',
-        'Figma'
+    'Database':[
+        'SQL',
+        'MongoDB'
+    ],
+    'Cloud Service':[
+        'Google Cloud Platform',
     ],
     'Operating Systems':[
         'Linux',
@@ -55,7 +63,7 @@ export const EducationData = [
         time:{
             start:2016
         },
-        score: '86.4 %'
+        score: '86.2 %'
     },
     {
         degree:'High School',
@@ -173,75 +181,58 @@ export const ExperienceData = [
 
 export const ProjectList = [
     {
-        title : 'NeuroVision',
-        githubLink : "/",
-        hostedLink : "/",
-        reportLink : "/",
-        techstack : ['C++', 'Python', 'Java'],
-        desc: 'Converts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into Images',
+        title : '3D Rendering Engine',
+        githubLink : "https://github.com/rajivnayanc/3D-rendering-engine-js",
+        hostedLink : "https://rajivnayanc.github.io/3D-rendering-engine-js/",
+        techstack : ['JavaScript', 'React.js'],
+        desc: 'This is a software rendering engine for web browsers. Built Software Ray Tracer from scratch. Planning to implement Software Rasterizer.',
         featured:true,
-        image:logo
+        image:threeDRayTracer
+    }, 
+    {
+        title : 'HouseFlix',
+        githubLink : "https://github.com/rajivnayanc/3D-rendering-engine-js",
+        techstack : ['JavaScript', 'React.js', 'Node.js'],
+        desc: 'This is a media streaming service to serve videos over a network. Installed this in home network connected with local NAS.',
+        featured:true,
+        image:houseflix
     },
     {
-        title : 'NeuroVision',
-        githubLink : "/",
-        hostedLink : "/",
-        reportLink : "/",
-        techstack : ['C++', 'Python', 'Java'],
-        desc: 'Converts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into Images',
+        title : 'NeuroFace',
+        githubLink : "https://github.com/rajivnayanc/Deep_Learning_Projects/tree/master/Facial_Keypoints_Detection",
+        reportLink : "https://github.com/rajivnayanc/Deep_Learning_Projects/blob/master/Facial_Keypoints_Detection/NeuroFace__Facial_Keypoints_Detection_using_Deep_Learning.pdf",
+        techstack : ['Python 3', 'PyTorch', 'OpenCV'],
+        desc: 'NeuroFace is a Deep Learning based Facial Keypoint detection application. It is an OpenCV based desktop application which uses Convolutional Neural Networks to detect 15 Facial keypoints of the face with high accuracy.',
         featured:true,
-        image:logo2
-    },
+        image:neuroface
+    }, 
     {
-        title : 'NeuroVision',
-        githubLink : "/",
-        hostedLink : "/",
-        reportLink : "/",
-        techstack : ['C++', 'Python', 'Java'],
-        desc: 'Converts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into Images',
+        title : 'Image to ASCII Converter',
+        githubLink : "https://github.com/rajivnayanc/image_to_ascii_image",
+        hostedLink : "https://rajivnayanc.github.io/image_to_ascii_image/",
+        techstack : ['JavaScript', 'React.js'],
+        desc: 'This Project converts an RGB image to set of ASCII characters. It uses intensity of each pixel of the grayscaled images and convert them to a corresponding ASCII character. This way, whole image can be represented as ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
         featured:true,
-        image:logo
-    },
+        image:imagetoascii
+    }, 
     {
-        title : '3D Rasterizer',
-        githubLink : "/",
-        hostedLink : "/",
-        reportLink : "/",
-        techstack : ['C++', 'Python', 'Java'],
-        desc: 'Converts EEG Signal into Images',
+        title : 'Image to ASCII Converter',
+        githubLink : "https://github.com/rajivnayanc/image_to_ascii_image",
+        hostedLink : "https://rajivnayanc.github.io/image_to_ascii_image/",
+        techstack : ['JavaScript', 'React.js'],
+        desc: 'This Project converts an RGB image to set of ASCII characters. It uses light intensity of each pixxels of the grayscaled images and convert them to a corresponding ASCII character. This way, whole image can be represented as ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
         featured:false,
-        image:"#"
+        image:null
     },
     {
-        title : '3D Rasterizer',
-        githubLink : "/",
-        hostedLink : "/",
-        reportLink : "/",
-        techstack : ['C++', 'Python', 'Java'],
-        desc: 'Converts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into ImagesConverts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into Images',
-        featured:true,
-        image:logo2
-    },
-    {
-        title : '3D Rasterizer',
-        githubLink : "/",
-        hostedLink : "/",
-        reportLink : "/",
-        techstack : ['C++', 'Python', 'Java'],
-        desc: 'Converts EEG Signal into Images',
+        title : 'Image to ASCII Converter',
+        githubLink : "https://github.com/rajivnayanc/image_to_ascii_image",
+        hostedLink : "https://rajivnayanc.github.io/image_to_ascii_image/",
+        techstack : ['JavaScript', 'React.js'],
+        desc: 'This Project converts an RGB image to set of ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
         featured:false,
-        image:"#"
-    },
-    {
-        title : '3D Rasterizer',
-        githubLink : "/",
-        hostedLink : "/",
-        reportLink : "/",
-        techstack : ['C++', 'Python', 'Java'],
-        desc: 'Converts EEG Signal into Images Converts EEG Signal into ImagesConverts EEG Signal into Images',
-        featured:false,
-        image:"#"
-    },
+        image:null
+    }, 
     
 ];
 

@@ -7,21 +7,19 @@ const CardFeatured = (props)=>{
     const data = props.data;
     if(!data)return(<></>);
 
-    const github = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a>:<></>;
-    const hosted = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a>:<></>;
-    const report = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-2 mr-1 fa fa-book"></i></a>:<></>;
+    const github = data.githubLink?<a target="_blank" rel="noreferrer" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a>:<></>;
+    const hosted = data.hostedLink?<a target="_blank" rel="noreferrer" href={data.hostedLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a>:<></>;
+    const report = data.reportLink?<a target="_blank" rel="noreferrer" href={data.reportLink}><i className="ml-2 mr-1 fa fa-book"></i></a>:<></>;
     const techstacks = data.techstack.map((val, ind)=> <Tag key = {ind}>{val}</Tag>)
     return(
         <CardDiv className="row w-100">
             <div className="col-12 col-sm-6 d-flex flex-row align-item-center justify-content-center">
                 <img className="align-self-center" style={{width:"95%"}} src={data.image} alt= "Project Report"/> 
             </div>
-            <div className="col-12 col-sm-6 mt-2 mt-sm-0 d-flex flex-column align-item-center justify-content-start">
+            <div className="col-12 col-sm-6 mt-2 mt-sm-0 d-flex flex-column align-item-center justify-content-center">
                 <h5 className="w-100">{data.title} {github}{hosted}{report}</h5>
                 <p>{data.desc}</p>
-                <div className="mt-auto">
-                {techstacks}
-                </div>
+                <div>{techstacks}</div>
             </div>
         </CardDiv>
     );
@@ -30,9 +28,9 @@ const CardOther = (props)=>{
     const data = props.data;
     if(!data)return(<></>);
 
-    const github = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a>:<></>;
-    const hosted = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a>:<></>;
-    const report = data.githubLink?<a target="__blank__" href={data.githubLink}><i className="ml-2 mr-1 fa fa-book"></i></a>:<></>;
+    const github = data.githubLink?<a target="_blank" rel="noreferrer" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a>:<></>;
+    const hosted = data.hostedLink?<a target="_blank" rel="noreferrer" href={data.hostedLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a>:<></>;
+    const report = data.reportLink?<a target="_blank" rel="noreferrer" href={data.reportLink}><i className="ml-2 mr-1 fa fa-book"></i></a>:<></>;
     const techstacks = data.techstack.map((val, ind)=> <Tag key = {ind}>{val}</Tag>)
     return(
         <CardDiv className="row w-100">
