@@ -1,7 +1,8 @@
 import React from 'react';
-import {ContainerDiv, CardDiv, Tag} from './ProjectsStyledComponents';
+import {ContainerDiv, CardDiv, Tag, Anchor} from './ProjectsStyledComponents';
 
 import {ProjectList} from '../../../shared/ProfileInfo';
+import {Links} from '../../../shared/links';
 
 const CardFeatured = (props)=>{
     const data = props.data;
@@ -83,6 +84,11 @@ function ProjectsPage() {
                     <h4 style={{fontWeight:'lighter'}}>Other Awesome Projects</h4>
                 </div>
                 {OtherProjectTags}
+            </div>
+            <div className="row p-0 m-0 mb-5 mt-5 w-100 justify-content-center">
+                <div className="col-auto">
+                    <Anchor target="_blank" rel="noreferrer" href = {Links.github} style={{fontWeight:'lighter'}}>Check all projects</Anchor>
+                </div>
             </div>
         </ContainerDiv>
     )

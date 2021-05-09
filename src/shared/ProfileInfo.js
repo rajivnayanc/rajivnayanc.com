@@ -216,24 +216,65 @@ export const ProjectList = [
         image:imagetoascii
     }, 
     {
-        title : 'Image to ASCII Converter',
-        githubLink : "https://github.com/rajivnayanc/image_to_ascii_image",
-        hostedLink : "https://rajivnayanc.github.io/image_to_ascii_image/",
-        techstack : ['JavaScript', 'React.js'],
-        desc: 'This Project converts an RGB image to set of ASCII characters. It uses light intensity of each pixxels of the grayscaled images and convert them to a corresponding ASCII character. This way, whole image can be represented as ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
+        title : 'So called Flappy Bird',
+        githubLink : "https://github.com/rajivnayanc/So_Called_Flappy_Bird",
+        hostedLink : "https://rajivnayanc.github.io/So_Called_Flappy_Bird/",
+        techstack : ['JavaScript', 'HTML', 'CSS'],
+        desc: 'So called Flappy Bird is Web based basic flappy bird game built on HTML5 Canvas. It also uses basic neural network to decide the next move based on next obstacle. You can also control the birds, which are represented as circles, using space key along with the AI.',
         featured:false,
         image:null
     },
     {
-        title : 'Image to ASCII Converter',
-        githubLink : "https://github.com/rajivnayanc/image_to_ascii_image",
-        hostedLink : "https://rajivnayanc.github.io/image_to_ascii_image/",
-        techstack : ['JavaScript', 'React.js'],
-        desc: 'This Project converts an RGB image to set of ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
+        title : 'GetNotify',
+        githubLink : "https://github.com/rajivnayanc/GetNotify",
+        techstack : ['Android Studio', 'Java', 'Firebase'],
+        desc: 'Sometimes we need to monitor our long running tasks through phone. GetNotify solves this problem. One can send requests to particular Firebases API through long running scripts at a particular intervals, and receive those as notifications on the phone from anywhere.',
         featured:false,
         image:null
-    }, 
-    
+    },
+    {
+        title : 'Resume-Creator: Github Action',
+        githubLink : "https://github.com/rajivnayanc/resume-creator-action",
+        hostedLink : "https://github.com/marketplace/actions/resume-creator-action",
+        reportLink : "https://dev.to/rajivnayanc/json-resume-to-github-pages-3m14",
+        techstack : ['JavaScript', 'Github Actions'],
+        desc: 'This Action reads the the JSON file having all the data about resume, creates a Resume Page, and host it on Github Pages.',
+        featured:false,
+        image:null
+    },
+    {
+        title : 'Numpy Based Neural Network',
+        githubLink : "https://github.com/rajivnayanc/Numpy_Vectorized_Feed_Forward_Neural_Network",
+        techstack : ['Python 3', 'NumPy'],
+        desc: 'This project demonstrates the working and implementation of vectorised feed forward neural networks using numpy. One can use the provided FNN class for training small neural networks. It includes several features like batch training, different activation funtions, number of layers, etc. 🔥',
+        featured:false,
+        image:null
+    },
+    {
+        title : 'Shoot the Balloons',
+        githubLink : "https://github.com/rajivnayanc/Shoot_the_Balloons_HTML5_canvas",
+        hostedLink : "https://rajivnayanc.github.io/Shoot_the_Balloons_HTML5_canvas/",
+        techstack : ['JavaScript', 'HTML', 'CSS'],
+        desc: 'Shoot the balloons is a HTML5 Canvas game built using plain JS. It is a simple game where one has to shoot balloons from a fixed canon and score.',
+        featured:false,
+        image:null
+    },
+    {
+        title : 'License Plate Detection',
+        githubLink : "https://github.com/rajivnayanc/LicensePlateDetection-HumAIn-TCS",
+        techstack : ['Python 3', 'PyTorch'],
+        desc: 'This project is a Deep Learning based License Plate Detection and License Plate Number extraction application. It uses YOLO-like Object detection algorithm to detect the license plate from the image and use PyTessaract for license number extraction from the plate image. It was built for TCS HumAIn Hacakthon.',
+        featured:false,
+        image:null
+    },
+    {
+        title : 'Startup Management',
+        githubLink : "https://github.com/rajivnayanc/Codeutsava",
+        techstack : ['HTML', 'CSS', 'JS', 'PHP'],
+        desc: 'This webapp can be used to effectively manage startups inside incubation center. This project was built during CodeUtsav, NIT Raipur Hackathon. It also won Honarable Mention award in the hackathon.',
+        featured:false,
+        image:null
+    },
 ];
 
 export const PublicationData = [

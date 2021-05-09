@@ -34,3 +34,15 @@ export const Tag = styled.span`
     font-size:0.8rem;
     float: left;
 `;
+
+export const Anchor = styled.a`
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    padding:0.5rem;
+    border-radius: 0.3rem;
+    transition: all var(--animationTime);
+    &:hover{
+        text-decoration: none;
+        color: var(--text-secondary);
+    }
+`;
