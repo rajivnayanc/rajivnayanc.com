@@ -1,7 +1,7 @@
 import React from 'react';
 import ParticlesJsCanvas from './SubComponents/ParticlesJsCanvas';
 import {ContainerDiv, Button, TagLineDiv, PCustom, PhotoDiv, StyleImgTag} from './SubComponents/HomePageStyleComponents';
-import profilePhoto from '../../../images/profilePic/rajiv.png';
+import profilePhoto from '../../../images/profilePic/rajiv.jpg';
 import Typed from 'react-typed';
 import {Links} from '../../../shared/links';
 import {TagLines} from '../../../shared/ProfileInfo';

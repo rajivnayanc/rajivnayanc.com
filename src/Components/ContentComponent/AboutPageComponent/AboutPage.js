@@ -8,7 +8,7 @@ function AboutPage() {
     // Layout Construction
     const TextContent = (<>
         <h4>{aboutMeContent.heading}</h4>
-        {aboutMeContent.content.map((text, ind)=><p key = {ind}>{text}</p>)}
+        {aboutMeContent.content.map((text, ind)=><p dangerouslySetInnerHTML={{__html:`${text}`}} key = {ind}/>)}
     </>);
     const TableData = Object.entries(skillSets).map(([name, skills], ind)=>{
         const skillsTagged = skills.map((skill, ind)=><Tag key={ind}>{skill}</Tag>);

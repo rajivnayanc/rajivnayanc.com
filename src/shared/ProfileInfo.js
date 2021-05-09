@@ -1,7 +1,7 @@
 import neuroface from './images/neuroface.jpg';
 import imagetoascii from './images/imagetoascii.jpg';
-import houseflix from './images/houseflix.png';
-import threeDRayTracer from './images/3dRayTracer.png';
+import houseflix from './images/houseflix.jpg';
+import threeDRayTracer from './images/3dRayTracer.jpg';
 
 export const TagLines = [
     "I am a Computer Engineer",
@@ -12,9 +12,8 @@ export const TagLines = [
 export const aboutMeContent = {
     heading:'Computer Science Engineer by ❤',
     content:[
-        'Hello Everyone! My name is Rajiv Nayan Choubey. I am an aspiring Computer Science Engineer and Researcher. The CPU clock cycle ticks me. I am inclined towards Web Development and Artificial Intelligence. I am also developing my interests in the field of Computer Graphics and other core CS areas. Building things from scratch interests me the most.',
-        'Favourite Quoute:',
-        '"What I cannot create, I cannot understand " - Richard Feynman'
+        'Hello There! My name is <b>Rajiv Nayan Choubey</b>. I am an aspiring <i>Computer Science Engineer</i> and <i>Researcher</i>. The CPU clock cycle ticks me. I am inclined towards <u>Web Development</u> and <u>Artificial Intelligence</u>. I am also developing my interests in the field of <u>Computer Graphics</u>, <u>Compiler Designing</u>, and other core CS areas. Building things from scratch interests me the most.',
+        'Favourite Quoute:<br><q>What I cannot create, I cannot understand </q> - Richard Feynman'
     ]
 };
 
@@ -31,6 +30,7 @@ export const skillSets = {
         'ReactJs',
         'PyTorch',
         'Tensorflow',
+        'Keras',
     ],
     'Database':[
         'SQL',
@@ -106,7 +106,7 @@ export const ExperienceData = [
             }
         },
         location: 'Campus Adda',
-        description:'A small startup by a group of four members of IIIT-NR. We sold hoodies and T-shirts to college students. Our startup was recognized by MorRaipur and Raipur Mayor. Sold hundreds of merchandise of various types. Built website to take merchandise orders. The website was able to take 300-350 orders within the institute.',
+        description:'Designed, developed, and deployed a web app for our startup - Campus Adda for ordering Hoodies and T-Shirts merchandise. The website was able to take 300-350 orders within the institute. Our startup was started by group of four IIIT, Naya Raipur students, which further was recognized by Raipur Mayor and MorRaipur Club. After that, hundreds of merchandise were solds throughout the Raipur city.',
         type:'professional'
     },
     {
@@ -185,7 +185,7 @@ export const ProjectList = [
         githubLink : "https://github.com/rajivnayanc/3D-rendering-engine-js",
         hostedLink : "https://rajivnayanc.github.io/3D-rendering-engine-js/",
         techstack : ['JavaScript', 'React.js'],
-        desc: 'This is a software rendering engine for web browsers. Built Software Ray Tracer from scratch. Planning to implement Software Rasterizer.',
+        desc: 'A software rendering engine for web browsers. Built Software Ray Tracer from scratch. Planning to implement Software Rasterizer.',
         featured:true,
         image:threeDRayTracer
     }, 
@@ -193,7 +193,7 @@ export const ProjectList = [
         title : 'HouseFlix',
         githubLink : "https://github.com/rajivnayanc/3D-rendering-engine-js",
         techstack : ['JavaScript', 'React.js', 'Node.js'],
-        desc: 'This is a media streaming service to serve videos over a network. Installed this in home network connected with local NAS.',
+        desc: 'A media streaming service to serve videos over a network. Installed this in home network connected with local NAS.',
         featured:true,
         image:houseflix
     },
@@ -211,7 +211,7 @@ export const ProjectList = [
         githubLink : "https://github.com/rajivnayanc/image_to_ascii_image",
         hostedLink : "https://rajivnayanc.github.io/image_to_ascii_image/",
         techstack : ['JavaScript', 'React.js'],
-        desc: 'This Project converts an RGB image to set of ASCII characters. It uses intensity of each pixel of the grayscaled images and convert them to a corresponding ASCII character. This way, whole image can be represented as ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
+        desc: 'A web-app to convert an RGB image to set of ASCII characters. It uses intensity of each pixel of the grayscaled images and convert them to a corresponding ASCII character. This way, whole image can be represented as ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
         featured:true,
         image:imagetoascii
     }, 
@@ -238,7 +238,7 @@ export const ProjectList = [
         hostedLink : "https://github.com/marketplace/actions/resume-creator-action",
         reportLink : "https://dev.to/rajivnayanc/json-resume-to-github-pages-3m14",
         techstack : ['JavaScript', 'Github Actions'],
-        desc: 'This Action reads the the JSON file having all the data about resume, creates a Resume Page, and host it on Github Pages.',
+        desc: 'A Github Action to read the the JSON file having all the data about resume, creates a Resume Page, and host it on Github Pages.',
         featured:false,
         image:null
     },
@@ -246,7 +246,7 @@ export const ProjectList = [
         title : 'Numpy Based Neural Network',
         githubLink : "https://github.com/rajivnayanc/Numpy_Vectorized_Feed_Forward_Neural_Network",
         techstack : ['Python 3', 'NumPy'],
-        desc: 'This project demonstrates the working and implementation of vectorised feed forward neural networks using numpy. One can use the provided FNN class for training small neural networks. It includes several features like batch training, different activation funtions, number of layers, etc. 🔥',
+        desc: 'A project for demonstrating the working and implementation of vectorised feed forward neural networks using numpy. One can use the provided FNN class for training small neural networks. It includes several features like batch training, different activation funtions, number of layers, etc. 🔥',
         featured:false,
         image:null
     },
@@ -263,7 +263,7 @@ export const ProjectList = [
         title : 'License Plate Detection',
         githubLink : "https://github.com/rajivnayanc/LicensePlateDetection-HumAIn-TCS",
         techstack : ['Python 3', 'PyTorch'],
-        desc: 'This project is a Deep Learning based License Plate Detection and License Plate Number extraction application. It uses YOLO-like Object detection algorithm to detect the license plate from the image and use PyTessaract for license number extraction from the plate image. It was built for TCS HumAIn Hacakthon.',
+        desc: 'A Deep Learning based License Plate Detection and License Plate Number extraction application. It uses YOLO-like Object detection algorithm to detect the license plate from the image and use PyTessaract for license number extraction from the plate image. It was built for TCS HumAIn Hacakthon.',
         featured:false,
         image:null
     },
@@ -271,7 +271,7 @@ export const ProjectList = [
         title : 'Startup Management',
         githubLink : "https://github.com/rajivnayanc/Codeutsava",
         techstack : ['HTML', 'CSS', 'JS', 'PHP'],
-        desc: 'This webapp can be used to effectively manage startups inside incubation center. This project was built during CodeUtsav, NIT Raipur Hackathon. It also won Honarable Mention award in the hackathon.',
+        desc: 'A webapp to effectively manage startups inside incubation center. This project was built during CodeUtsav, NIT Raipur Hackathon. It also won Honarable Mention award in the hackathon.',
         featured:false,
         image:null
     },
