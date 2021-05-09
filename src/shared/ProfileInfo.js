@@ -12,8 +12,8 @@ export const TagLines = [
 export const aboutMeContent = {
     heading:'Computer Science Engineer by ❤',
     content:[
-        'Hello There! My name is <b>Rajiv Nayan Choubey</b>. I am an aspiring <i>Computer Science Engineer</i> and <i>Researcher</i>. The CPU clock cycle ticks me. I am inclined towards <u>Web Development</u> and <u>Artificial Intelligence</u>. I am also developing my interests in the field of <u>Computer Graphics</u>, <u>Compiler Designing</u>, and other core CS areas. Building things from scratch interests me the most.',
-        'Favourite Quoute:<br><q>What I cannot create, I cannot understand </q> - Richard Feynman'
+        'Hello There! I am <b>Rajiv Nayan Choubey</b>, an aspiring <i>Computer Science Engineer</i> and <i>Researcher</i>. The CPU clock cycle ticks me. My interests lies in the domain of <u>Web Development</u> and <u>Artificial Intelligence</u>. These days, I am also exploring the fields of <u>Computer Graphics</u>, <u>Compiler Designing</u>, and other core CS areas. Building things from scratch makes me euphoric.',
+        'Quote that inspires me:<br><q>What I cannot create, I cannot understand </q> - Richard Feynman'
     ]
 };
 
@@ -106,7 +106,7 @@ export const ExperienceData = [
             }
         },
         location: 'Campus Adda',
-        description:'Designed, developed, and deployed a web app for our startup - Campus Adda for ordering Hoodies and T-Shirts merchandise. The website was able to take 300-350 orders within the institute. Our startup was started by group of four IIIT, Naya Raipur students, which further was recognized by Raipur Mayor and MorRaipur Club. After that, hundreds of merchandise were solds throughout the Raipur city.',
+        description:'Designed, developed, and deployed a web app for our startup - Campus Adda for ordering merchandise like Hoodies and T-Shirts. The website received 300-350 order request within the institute. The startup was founded by a group of four IIIT - Naya Raipur students, which further was recognized by Raipur Mayor and MorRaipur Club. As a result, hundreds of merchandise were sold throughout the Raipur city.',
         type:'professional'
     },
     {
@@ -143,7 +143,7 @@ export const ExperienceData = [
             }
         },
         location: 'SciNtfic, IIIT-Naya Raipur',
-        description:'Organised two-day technology fest for school students under IIIT Naya Raipur. With the help of team, managed 400 school students from across the cities. Also, we built various technical galleries along with lectures for school students.',
+        description:'Organised two-day technology fest for school students under IIIT Naya Raipur. With the team\'s help, managed 400 school students from various cities. Also, we built various technical galleries and took workshop/lectures for school students on various Science and Career topics.',
         type:'volunteer'
     },
     {
@@ -155,7 +155,7 @@ export const ExperienceData = [
             }
         },
         location: 'Technovate\'19, IIIT-Naya Raipur',
-        description:'Planned and Organized Coding+Puzzle Event \'Puzzle Express\' for techfest of the institute.',
+        description:'Planned and Organized Coding+Puzzle Event - \'Puzzle Express\' for techfest of the institute.',
         type:'volunteer'
     },
     {
@@ -171,7 +171,7 @@ export const ExperienceData = [
             }
         },
         location: 'Technovate\'20, IIIT-Naya Raipur',
-        description:'Built, hosted, and maintained the website of Technovate\'20 technical festival of IIIT, Naya Raipur with a team of three members. The website was built using Django and was hosted from scratch on Linux Server provided by Institute. The admins were able to add, modify, and delete the contents of the website using CMS portals without developer intervention. Before corona hit, the website was able to serve a multitude of requests from all across India.',
+        description:'Built, hosted, and maintained the website of Technovate\'20, techo-cultural festival of IIIT - Naya Raipur with a team of three members. The website was built using Django and was hosted from scratch on Linux Server provided by the Institute. The admins were able to add, modify, and delete the contents of the website using CMS portals without developer intervention. Before the pandemic, the website was able to serve a multitude of requests from all across India.',
         type:'volunteer'
     },
     
@@ -193,7 +193,7 @@ export const ProjectList = [
         title : 'HouseFlix',
         githubLink : "https://github.com/rajivnayanc/3D-rendering-engine-js",
         techstack : ['JavaScript', 'React.js', 'Node.js'],
-        desc: 'A media streaming service to serve videos over a network. Installed this in home network connected with local NAS.',
+        desc: 'A media streaming service to serve videos over a network. Installed it in the home network connected with local NAS.',
         featured:true,
         image:houseflix
     },
@@ -202,7 +202,7 @@ export const ProjectList = [
         githubLink : "https://github.com/rajivnayanc/Deep_Learning_Projects/tree/master/Facial_Keypoints_Detection",
         reportLink : "https://github.com/rajivnayanc/Deep_Learning_Projects/blob/master/Facial_Keypoints_Detection/NeuroFace__Facial_Keypoints_Detection_using_Deep_Learning.pdf",
         techstack : ['Python 3', 'PyTorch', 'OpenCV'],
-        desc: 'NeuroFace is a Deep Learning based Facial Keypoint detection application. It is an OpenCV based desktop application which uses Convolutional Neural Networks to detect 15 Facial keypoints of the face with high accuracy.',
+        desc: 'NeuroFace is a Deep Learning based Facial Keypoint detection application. It is an highly accurate OpenCV based desktop application which uses Convolutional Neural Networks to detect 15 Facial keypoints of the face.',
         featured:true,
         image:neuroface
     }, 
@@ -211,7 +211,7 @@ export const ProjectList = [
         githubLink : "https://github.com/rajivnayanc/image_to_ascii_image",
         hostedLink : "https://rajivnayanc.github.io/image_to_ascii_image/",
         techstack : ['JavaScript', 'React.js'],
-        desc: 'A web-app to convert an RGB image to set of ASCII characters. It uses intensity of each pixel of the grayscaled images and convert them to a corresponding ASCII character. This way, whole image can be represented as ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
+        desc: 'A web-app to convert an RGB image to set of ASCII characters. It uses intensity of each pixel of the grayscaled images and convert them to a corresponding ASCII character. This way, the whole image can be represented as ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
         featured:true,
         image:imagetoascii
     }, 
@@ -220,7 +220,7 @@ export const ProjectList = [
         githubLink : "https://github.com/rajivnayanc/So_Called_Flappy_Bird",
         hostedLink : "https://rajivnayanc.github.io/So_Called_Flappy_Bird/",
         techstack : ['JavaScript', 'HTML', 'CSS'],
-        desc: 'So called Flappy Bird is Web based basic flappy bird game built on HTML5 Canvas. It also uses basic neural network to decide the next move based on next obstacle. You can also control the birds, which are represented as circles, using space key along with the AI.',
+        desc: 'So called Flappy Bird is a Web based basic flappy bird game built on HTML5 Canvas. A trivial neural network is used to decide the next move based on next obstacle. One can also control the birds, which are represented as circles, using space key along with the AI.',
         featured:false,
         image:null
     },
@@ -228,7 +228,7 @@ export const ProjectList = [
         title : 'GetNotify',
         githubLink : "https://github.com/rajivnayanc/GetNotify",
         techstack : ['Android Studio', 'Java', 'Firebase'],
-        desc: 'Sometimes we need to monitor our long running tasks through phone. GetNotify solves this problem. One can send requests to particular Firebases API through long running scripts at a particular intervals, and receive those as notifications on the phone from anywhere.',
+        desc: 'Sometimes we need to monitor our long running tasks through phone. GetNotify is here to save the day. One can send message requests to particular Firebases API through long running scripts at regular intervals, and receive those messages as notifications on the phone from anywhere.',
         featured:false,
         image:null
     },
@@ -238,7 +238,7 @@ export const ProjectList = [
         hostedLink : "https://github.com/marketplace/actions/resume-creator-action",
         reportLink : "https://dev.to/rajivnayanc/json-resume-to-github-pages-3m14",
         techstack : ['JavaScript', 'Github Actions'],
-        desc: 'A Github Action to read the the JSON file having all the data about resume, creates a Resume Page, and host it on Github Pages.',
+        desc: 'A Github Action to read the JSON file containing the Resume data in a specific format, creates a static Resume Page, and hosts it on Github Pages.',
         featured:false,
         image:null
     },
@@ -255,7 +255,7 @@ export const ProjectList = [
         githubLink : "https://github.com/rajivnayanc/Shoot_the_Balloons_HTML5_canvas",
         hostedLink : "https://rajivnayanc.github.io/Shoot_the_Balloons_HTML5_canvas/",
         techstack : ['JavaScript', 'HTML', 'CSS'],
-        desc: 'Shoot the balloons is a HTML5 Canvas game built using plain JS. It is a simple game where one has to shoot balloons from a fixed canon and score.',
+        desc: 'Shoot the balloons is a HTML5 Canvas game, built using vanilla JS, where one has to shoot balloons from a fixed canon and score.',
         featured:false,
         image:null
     },
@@ -263,7 +263,7 @@ export const ProjectList = [
         title : 'License Plate Detection',
         githubLink : "https://github.com/rajivnayanc/LicensePlateDetection-HumAIn-TCS",
         techstack : ['Python 3', 'PyTorch'],
-        desc: 'A Deep Learning based License Plate Detection and License Plate Number extraction application. It uses YOLO-like Object detection algorithm to detect the license plate from the image and use PyTessaract for license number extraction from the plate image. It was built for TCS HumAIn Hacakthon.',
+        desc: 'A Deep Learning based License Plate Detection and License Plate Number extraction application. It uses YOLO-like Object detection algorithm to detect the license plate from the image and uses PyTessaract for license number extraction from the plate image. It was built for TCS HumAIn Hackathon.',
         featured:false,
         image:null
     },
@@ -271,7 +271,7 @@ export const ProjectList = [
         title : 'Startup Management',
         githubLink : "https://github.com/rajivnayanc/Codeutsava",
         techstack : ['HTML', 'CSS', 'JS', 'PHP'],
-        desc: 'A webapp to effectively manage startups inside incubation center. This project was built during CodeUtsav, NIT Raipur Hackathon. It also won Honarable Mention award in the hackathon.',
+        desc: 'A webapp to effectively manage startups inside an incubation center. The project was built during CodeUtsav, NIT Raipur Hackathon. It won the Honarable Mention award in the hackathon.',
         featured:false,
         image:null
     },

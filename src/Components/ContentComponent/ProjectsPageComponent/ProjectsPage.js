@@ -81,7 +81,7 @@ function ProjectsPage() {
             </div>
             <div className="row p-0 m-0 mt-5 w-100 justify-content-center">
                 <div className="col-12">
-                    <h4 style={{fontWeight:'lighter'}}>Other Awesome Projects</h4>
+                    <h4 style={{fontWeight:'lighter'}}>More of my Awesomeness...</h4>
                 </div>
                 {OtherProjectTags}
             </div>
