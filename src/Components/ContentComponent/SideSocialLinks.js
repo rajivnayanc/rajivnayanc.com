@@ -17,24 +17,37 @@ const LinkAnchor = styled.a`
         color:var(--text-primary);
     }
 `;
+const LinkAnchorV = styled.a`
+    color:var(--text-primary);
+    padding:3px;
+    &:hover{
+        color:var(--text-primary);
+    }
+`;
+const DivVert = styled.div`
+    writing-mode: vertical-rl;
+    font-size:0.8rem;
+`;
 function SideSocialLinks() {
+    const SocialMediaLinks = Links.socialmedia.map((data,ind)=>(
+        <div key={ind} className="col-12">
+            <LinkAnchor rel="noreferrer" target="_blank" href={data.link}>
+                <i className={data.icon}></i>
+            </LinkAnchor>
+        </div>
+    ));
     return (
-        <FixedLinks className="row d-block d-sm-none">
-                <div className="col-12">
-                    <LinkAnchor rel="noreferrer" target="_blank" href={Links.github}>
-                        <i className="fab fa-github"></i>
-                    </LinkAnchor>
-                </div>
-                <div className="col-12">
-                    <LinkAnchor rel="noreferrer" target="_blank" href={Links.linkedin}>
-                        <i className="fab fa-linkedin"></i>
-                    </LinkAnchor>
-                </div>
-                <div className="col-12">
-                    <LinkAnchor rel="noreferrer" target="_blank" href={Links.twitter}>
-                        <i className="fab fa-twitter"></i>
-                    </LinkAnchor>
-                </div>
+        <FixedLinks>
+            <div className="row">
+                <DivVert className="mb-3 mb-sm-1 col-12">
+                    Logo Credits:<LinkAnchorV rel="noreferrer" target="_blank" href={Links.logoCredit.link}>
+                        <b>{Links.logoCredit.name}</b>
+                    </LinkAnchorV>
+                </DivVert>
+            </div>
+            <div className="row d-block d-sm-none">
+                {SocialMediaLinks}
+            </div>
         </FixedLinks>
     )
 }

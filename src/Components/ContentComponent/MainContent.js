@@ -35,7 +35,7 @@ function MainContent(props) {
                     <Redirect to ="/home" />
                 </Route>
                 <Route path="/home" exact component={()=><HomePage theme={theme} />} />
-                <Route path="/about-us" exact component={()=><AboutPage theme={theme} />} />
+                <Route path="/about-me" exact component={()=><AboutPage theme={theme} />} />
                 <Route path="/education" exact component={()=><EducationPage theme={theme} />} />
                 <Route path="/experience" exact component={()=><ExperiencePage theme={theme} />} />
                 <Route path="/projects" exact component={()=><ProjectsPage theme={theme} />} />
