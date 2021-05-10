@@ -64,8 +64,11 @@
 
 .nav-link .logoImg{
     width: 2rem;
+    transform: scale(1.5);
     min-width: 2rem;
     margin-left: 1rem;
+    color: black;
+    padding:0;
 }
 
 .nav-link i{
@@ -119,7 +122,7 @@
     color: var(--text-primary);
 }
 .logo .logoImg {
-    transform: rotate(0deg);
+    transform: scale(1.8) rotate(0deg);
     transition: var(--animationTime);
     margin-left: 0.9rem;
 }
@@ -215,7 +218,7 @@
     }
     .navbar:hover .logo .logoImg{
         margin-left: 10rem;
-        transform: rotate(-360deg);
+        transform: scale(1.8) rotate(-360deg);
     }
     .navbar:hover .logo-text{
         left: 1rem;

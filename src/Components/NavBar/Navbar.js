@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import logo from '../../images/logowithBg.png';
+import {ReactComponent as Logo} from '../../images/logo.svg';
 import {Link, NavLink} from 'react-router-dom';
 import {Links} from '../../shared/links';
 import './navbarstyles.css';
@@ -24,13 +24,15 @@ function NavBar(props) {
     const hideNavBarMenu = (e)=>{
         setNavMenuExpanded(false);
     }
+    const logoColor = props.theme==="light"?"#222":"#abc"
     return (
         <div id="navbarContainer" className="navbar">
             {/* Header with Brand Name */}
             <div className="logo">
                 <Link className="nav-link logo-link" to = "/">
                     <span className="link-text logo-text">@rajivnayanc</span>
-                    <img src={logo} className="logoImg" alt="logo"/>
+                    {/* <img src={logo} className="logoImg" alt="logo"/> */}
+                    <Logo fill={logoColor} stroke={logoColor} className="logoImg" alt="logo"/>
 
                     <span onClick={(e)=>{e.preventDefault();props.setTheme()}} className="d-flex d-sm-none ml-auto">
                         

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Rajiv Nayan Choubey",
+  "name": "Rajiv Nayan Choubey's personal website",
   "icons": [
     {
       "src": "favicon.ico",
@@ -13,54 +13,13 @@
       "sizes": "64x64"
     },
     {
-      "src": "logo241.png",
+      "src": "logo128.png",
       "type": "image/png",
-      "sizes": "241x241"
-    },
-    {
-      "src": "logo370.png",
+      "sizes": "128x128"
+    }{
+      "src": "logo256.png",
       "type": "image/png",
-      "sizes": "370x370"
-    },
-    {
-      "src": "logo465.png",
-      "type": "image/png",
-      "sizes": "465x465"
-    },
-    {
-      "src": "logo541.png",
-      "type": "image/png",
-      "sizes": "541x541"
-    },
-    {
-      "src": "logo631.png",
-      "type": "image/png",
-      "sizes": "631x631"
-    },
-    {
-      "src": "logo692.png",
-      "type": "image/png",
-      "sizes": "692x692"
-    },
-    {
-      "src": "logo761.png",
-      "type": "image/png",
-      "sizes": "761x761"
-    },
-    {
-      "src": "logo812.png",
-      "type": "image/png",
-      "sizes": "812x812"
-    },
-    {
-      "src": "logo897.png",
-      "type": "image/png",
-      "sizes": "897x897"
-    },
-    {
-      "src": "logo1000.png",
-      "type": "image/png",
-      "sizes": "1000x1000"
+      "sizes": "256x256"
     }
   ],
   "start_url": ".",
