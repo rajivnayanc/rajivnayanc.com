@@ -38,8 +38,8 @@ function SideSocialLinks() {
     ));
     return (
         <FixedLinks>
-            <div className="row">
-                <DivVert className="mb-3 mb-sm-1 col-12">
+            <div className="row d-flex justify-content-end">
+                <DivVert className="mb-3 mb-sm-1 col-auto">
                     Logo Credits:<LinkAnchorV rel="noreferrer" target="_blank" href={Links.logoCredit.link}>
                         <b>{Links.logoCredit.name}</b>
                     </LinkAnchorV>

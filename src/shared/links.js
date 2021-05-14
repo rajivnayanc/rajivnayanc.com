@@ -1,5 +1,5 @@
 export const Links = {
-    resume  :'https://drive.google.com/file/d/1dcAftWcMr6qrtkSgTMAbbN1kYt2l_EMq/view?usp=sharing',
+    resume  :'https://rajivnayanc.github.io/resume-latex-overleaf/resume.pdf',
     email   :'rajivnayanc@gmail.com',
     socialmedia:[
         {
