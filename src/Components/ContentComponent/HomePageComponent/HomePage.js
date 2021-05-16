@@ -34,8 +34,8 @@ function HomePage(props) {
                             <PCustom color="white" minsize="20px" maxsize="50px" size="5vw" weight="400" />
                         </Typed>
                         <div className="d-flex d-sm-none flex-row justify-content-start align-items-center">
-                            <Button>Contact Me</Button>
-                            <Button>Resume</Button>
+                            <Button target="__blank__" href={`mailto:${Links.email}`}>Contact Me</Button>
+                            <Button target="__blank__" href={Links.resume}>Resume</Button>
                         </div>
                    </TagLineDiv>
                 </div>
