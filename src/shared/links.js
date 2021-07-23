@@ -13,6 +13,11 @@ export const Links = {
             icon:'fab fa-linkedin'
         },
         {
+            name:'YouTube',
+            link:'https://www.youtube.com/c/TheLostCoders',
+            icon:'fab fa-youtube'
+        },
+        {
             name:'Twitter',
             link:'https://twitter.com/rajivnayanc',
             icon:'fab fa-twitter'

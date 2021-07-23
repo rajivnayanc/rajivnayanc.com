@@ -51,10 +51,10 @@ export const EducationData = [
         major:'CSE',
         institute:'International Institute of Information Technology, Naya Raipur',
         time:{
-            start:2017,
-            end: 'present'
+            start: 2017,
+            end: 2021
         },
-        score: '9.5 CGPA'
+        score: '9.49 CGPA'
     },
     {
         degree:'Intermediate',
@@ -116,10 +116,26 @@ export const ExperienceData = [
                 month:1,
                 year:2021
             },
-            end:'Present'
+            end:{
+                month:6,
+                year:2021
+            },
         },
         location: 'Goldman Sachs',
         description:'Working on Digitization of documents',
+        type:'professional'
+    },
+    {
+        role:'Software Engineer (Analyst)',
+        time:{
+            start:{
+                month:6,
+                year:2021
+            },
+            end:'Present'
+        },
+        location: 'Goldman Sachs',
+        // description:'Working on Digitization of documents',
         type:'professional'
     },
     {
