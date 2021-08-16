@@ -54,7 +54,7 @@ export const EducationData = [
             start: 2017,
             end: 2021
         },
-        score: '9.49 CGPA'
+        score: '9.52 CGPA'
     },
     {
         degree:'Intermediate',
