@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import MainContent from './ContentComponent/MainContent';
 import Navbar from './NavBar/Navbar';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {HashRouter as Router} from 'react-router-dom';
 function MainComponent() {
     const [theme, setTheme] = useState('dark');
     window.onload = function(){
