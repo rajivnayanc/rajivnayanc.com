@@ -101,8 +101,8 @@ export const ExperienceData = [
                 year:2018
             },
             end:{
-                month:1,
-                year:2021
+                month:3,
+                year:2020
             }
         },
         location: 'Campus Adda',
