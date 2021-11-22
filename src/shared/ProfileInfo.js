@@ -106,7 +106,7 @@ export const ExperienceData = [
             }
         },
         location: 'Campus Adda',
-        description:'Designed, developed, and deployed a web app for our startup - Campus Adda for ordering merchandise like Hoodies and T-Shirts. The website received 300-350 order request within the institute. The startup was founded by a group of four IIIT - Naya Raipur students, which further was recognized by Raipur Mayor and MorRaipur Club. As a result, hundreds of merchandise were sold throughout the Raipur city.',
+        description:'Designed, developed, and deployed a web app for our startup - Campus Adda for ordering merchandise like Hoodies and T-Shirts. The website received 1000+ order requests within the institute and across Raipur city. The startup was founded by a group of four IIIT - Naya Raipur students, which further was recognized by Raipur Mayor and MorRaipur Club. As a result, hundreds of merchandise were sold throughout the Raipur city.',
         type:'professional'
     },
     {
