@@ -295,6 +295,32 @@ export const ProjectList = [
 
 export const PublicationData = [
     {
+        title:'NeuroVision: perceived image regeneration using cProGAN',
+        link:'https://link.springer.com/article/10.1007/s00521-021-06774-1',
+        year:2022,
+        type:'journal',
+        publisher:'Springer',
+        conference:'Neural Computing and Applications' ,
+        authors:[
+            {
+                name:'Sanchita Khare',
+                profile:'https://www.linkedin.com/in/sanchita-khare/'
+            },
+            {
+                name:'Rajiv Nayan Choubey',
+                profile:'https://www.linkedin.com/in/rajivnayanc/'
+            },
+            {
+                name:'Loveleen Amar',
+                profile:'https://www.linkedin.com/in/loveleen-amar/'
+            },
+            {
+                name:'Venkanna U',
+                profile:'https://www.linkedin.com/in/venkanna-uduthalapally-1749a6143/'
+            },
+        ]
+    },
+    {
         title:'Internet Traffic Classifier Using Artificial Neural Network and 1D-CNN',
         link:'https://ieeexplore.ieee.org/document/9031882',
         year:2019,
