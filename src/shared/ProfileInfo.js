@@ -300,7 +300,7 @@ export const PublicationData = [
         year:2022,
         type:'journal',
         publisher:'Springer',
-        conference:'Neural Computing and Applications' ,
+        journal:'Neural Computing and Applications' ,
         authors:[
             {
                 name:'Sanchita Khare',
