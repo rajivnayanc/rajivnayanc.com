@@ -77,38 +77,39 @@ export const EducationData = [
 ];
 
 export const ExperienceData = [
+
+    // Professional Experiences
     {
-        role:'Summer Intern (SDE)',
+        role:'Software Engineer',
         time:{
             start:{
-                month:5,
-                year:2020
+                month:6,
+                year:2022
+            },
+            end:'Present'
+        },
+        location: 'Google',
+        // description:'Working in Google Maps on building services to moderate user generated contents.',
+        type:'professional'
+    },
+
+    {
+        role:'Software Engineer (Analyst)',
+        time:{
+            start:{
+                month:6,
+                year:2021
             },
             end:{
                 month:6,
-                year:2020
+                year:2022
             }
         },
         location: 'Goldman Sachs',
-        description:'Worked on PoC of Digitization of documents',
+        description:'Worked on Java based data reconciliation process which collects similar data from various database sources and create recon journals. It optimizes over previous method by 8 times.',
         type:'professional'
     },
-    {
-        role:'Co-Founder and Technical Head',
-        time:{
-            start:{
-                month:11,
-                year:2018
-            },
-            end:{
-                month:3,
-                year:2020
-            }
-        },
-        location: 'Campus Adda',
-        description:'Designed, developed, and deployed a web app for our startup - Campus Adda for ordering merchandise like Hoodies and T-Shirts. The website received 1000+ order requests within the institute and across Raipur city. The startup was founded by a group of four IIIT - Naya Raipur students, which further was recognized by Raipur Mayor and MorRaipur Club. As a result, hundreds of merchandise were sold throughout the Raipur city.',
-        type:'professional'
-    },
+
     {
         role:'Seasonal Intern (SDE)',
         time:{
@@ -125,19 +126,43 @@ export const ExperienceData = [
         description:'Working on Digitization of documents',
         type:'professional'
     },
+
     {
-        role:'Software Engineer (Analyst)',
+        role:'Summer Intern (SDE)',
         time:{
             start:{
-                month:6,
-                year:2021
+                month:5,
+                year:2020
             },
-            end:'Present'
+            end:{
+                month:6,
+                year:2020
+            }
         },
         location: 'Goldman Sachs',
-        // description:'Working on Digitization of documents',
+        description:'Worked on PoC of Digitization of documents',
         type:'professional'
     },
+
+    {
+        role:'Co-Founder and Technical Head',
+        time:{
+            start:{
+                month:11,
+                year:2018
+            },
+            end:{
+                month:3,
+                year:2020
+            }
+        },
+        location: 'Campus Adda',
+        description:'Designed, developed, and deployed a web app for our startup - Campus Adda for ordering merchandise like Hoodies and T-Shirts. The website received 1000+ order requests within the institute and across Raipur city. The startup was founded by a group of four IIIT - Naya Raipur students, which further was recognized by Raipur Mayor and MorRaipur Club. As a result, hundreds of merchandise were sold throughout the Raipur city.',
+        type:'professional'
+    },
+    
+    
+    // Volunteer Experiences
     {
         role:'Co-Founder',
         time:{
@@ -190,7 +215,6 @@ export const ExperienceData = [
         description:'Built, hosted, and maintained the website of Technovate\'20, techo-cultural festival of IIIT - Naya Raipur with a team of three members. The website was built using Django and was hosted from scratch on Linux Server provided by the Institute. The admins were able to add, modify, and delete the contents of the website using CMS portals without developer intervention. Before the pandemic, the website was able to serve a multitude of requests from all across India.',
         type:'volunteer'
     },
-    
 
 ];
 
