@@ -231,7 +231,7 @@ export const ProjectList = [
     }, 
     {
         title : 'HouseFlix',
-        githubLink : "https://github.com/rajivnayanc/3D-rendering-engine-js",
+        githubLink : "https://github.com/rajivnayanc/HouseFlix",
         techstack : ['JavaScript', 'React.js', 'Node.js'],
         desc: 'A media streaming service to serve videos over a network. Installed it in the home network connected with local NAS.',
         featured:true,
