@@ -1,53 +1,76 @@
 import styled from 'styled-components';
 
-export const ContainerDiv = styled.div`
-    min-height:calc(100vh - 2rem);
-    @media only screen and (max-width:600px){
-        min-height: calc(100vh - 5rem);
-    }
-`;
-
 export const CardDiv = styled.div`
     position: relative;
-    font-weight: 100;
-    // border-left: 5px solid green;
-    // border-bottom: 1px solid green;
-    padding: 15px;
-    background: var(--bg-primary);
-    // margin-top: 0.75rem;
-    // margin-bottom: 0.75rem;
-    transition: all var(--animationTime);
+    padding: 1.5rem;
+    padding-left: 2rem;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    transition: all var(--animation-speed) ease;
+    border: 1px solid var(--glass-border);
+    transform: translateX(20px); /* Slight indent for timeline */
+    width: calc(100% - 20px);
     
-    &:hover{
-        background: var(--bg-secondary);
-    }
-    &:after{
-        content : "";
-        position: absolute;
-        left    : -2%;
-        top     : 50%;
-        height  : 10px;
-        width   : 10px;
-        transform: translate(-50%) scale(1);
-        background: green;
-        border-radius: 50%; 
-        transition: all var(--animationTime);
+    &:hover {
+        background: var(--bg-tertiary);
+        transform: translateX(25px);
+        box-shadow: 0 4px 20px var(--shadow-color);
+        border-color: var(--accent-glow);
     }
 
-    &:hover:after{
-        transform: translate(-50%) scale(1.5);
-    }
-    &:before{
-        content : "";
+    /* Timeline dot */
+    &:after {
+        content: "";
         position: absolute;
-        left    : -2%;
-        top     : 0;
-        height  : 100%;
-        width   : 1px;
-        transform: translate(-50%);
-        background: green;
-        // border-radius: 50%; 
-        border:1px solid green;
+        left: -28px;
+        top: 2rem;
+        height: 16px;
+        width: 16px;
+        background: var(--bg-primary);
+        border: 2px solid var(--accent-primary);
+        border-radius: 50%;
+        transition: all var(--animation-speed) ease;
+        z-index: 1;
+    }
+
+    &:hover:after {
+        background: var(--accent-primary);
+        box-shadow: 0 0 10px var(--accent-glow);
+    }
+    
+    /* Timeline line connecting to next item - handled by parent container or pseudo element on card */
+    &:before {
+        content: "";
+        position: absolute;
+        left: -21px;
+        top: 0;
+        height: calc(100% + 2rem); /* Extend to next item */
+        width: 2px;
+        background: var(--bg-tertiary);
+        z-index: 0;
+    }
+
+    &:last-child:before {
+        height: 2rem; /* Stop line at the last dot */
+    }
+
+    h4 {
+        color: var(--text-primary);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    
+    h6 {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        color: var(--text-secondary);
+        font-size: 1rem;
+        line-height: 1.6;
     }
 `;
 

@@ -1,93 +1,93 @@
 import React from 'react';
-import {ContainerDiv, CardDiv, Tag, Anchor} from './ProjectsStyledComponents';
+import { CardDiv, Tag, Anchor } from './ProjectsStyledComponents';
+import { ContainerDiv, SectionTitle } from '../../shared/SharedStyleComponents';
+import { ProjectList } from '../../../shared/ProfileInfo';
+import { Links } from '../../../shared/links';
 
-import {ProjectList} from '../../../shared/ProfileInfo';
-import {Links} from '../../../shared/links';
-
-const CardFeatured = (props)=>{
+const CardFeatured = (props) => {
     const data = props.data;
-    if(!data)return(<></>);
+    if (!data) return (<></>);
 
-    const github = data.githubLink?<a target="_blank" rel="noreferrer" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a>:<></>;
-    const hosted = data.hostedLink?<a target="_blank" rel="noreferrer" href={data.hostedLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a>:<></>;
-    const report = data.reportLink?<a target="_blank" rel="noreferrer" href={data.reportLink}><i className="ml-2 mr-1 fa fa-book"></i></a>:<></>;
-    const techstacks = data.techstack.map((val, ind)=> <Tag key = {ind}>{val}</Tag>)
-    return(
+    const github = data.githubLink ? <a target="_blank" rel="noreferrer" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a> : <></>;
+    const hosted = data.hostedLink ? <a target="_blank" rel="noreferrer" href={data.hostedLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a> : <></>;
+    const report = data.reportLink ? <a target="_blank" rel="noreferrer" href={data.reportLink}><i className="ml-2 mr-1 fa fa-book"></i></a> : <></>;
+    const techstacks = data.techstack.map((val, ind) => <Tag key={ind}>{val}</Tag>)
+    return (
         <CardDiv className="row w-100">
             <div className="col-12 col-sm-6 d-flex flex-row align-item-center justify-content-center">
-                <img className="align-self-center" style={{width:"95%"}} src={data.image} alt= "Project Report"/> 
+                <img className="align-self-center" style={{ width: "95%", borderRadius: "var(--border-radius)" }} src={data.image} alt="Project Report" />
             </div>
             <div className="col-12 col-sm-6 mt-2 mt-sm-0 d-flex flex-column align-item-center justify-content-center">
-                <h5 className="w-100">{data.title} {github}{hosted}{report}</h5>
+                <h5 className="w-100 font-weight-bold">{data.title} {github}{hosted}{report}</h5>
                 <p>{data.desc}</p>
                 <div>{techstacks}</div>
             </div>
         </CardDiv>
     );
 }
-const CardOther = (props)=>{
+const CardOther = (props) => {
     const data = props.data;
-    if(!data)return(<></>);
+    if (!data) return (<></>);
 
-    const github = data.githubLink?<a target="_blank" rel="noreferrer" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a>:<></>;
-    const hosted = data.hostedLink?<a target="_blank" rel="noreferrer" href={data.hostedLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a>:<></>;
-    const report = data.reportLink?<a target="_blank" rel="noreferrer" href={data.reportLink}><i className="ml-2 mr-1 fa fa-book"></i></a>:<></>;
-    const techstacks = data.techstack.map((val, ind)=> <Tag key = {ind}>{val}</Tag>)
-    return(
+    const github = data.githubLink ? <a target="_blank" rel="noreferrer" href={data.githubLink}><i className="ml-4 mr-1 fab fa-github"></i></a> : <></>;
+    const hosted = data.hostedLink ? <a target="_blank" rel="noreferrer" href={data.hostedLink}><i className="ml-2 mr-1 fa fa-external-link-alt"></i></a> : <></>;
+    const report = data.reportLink ? <a target="_blank" rel="noreferrer" href={data.reportLink}><i className="ml-2 mr-1 fa fa-book"></i></a> : <></>;
+    const techstacks = data.techstack.map((val, ind) => <Tag key={ind}>{val}</Tag>)
+    return (
         <CardDiv className="row w-100">
             <div className="col-12 h-100 d-flex flex-column justify-content-start">
-                <h6 className="w-100">{data.title} {github}{hosted}{report}</h6>
+                <h6 className="w-100 font-weight-bold">{data.title} {github}{hosted}{report}</h6>
                 <p>{data.desc}</p>
                 <div className="mt-auto">
-                {techstacks}
+                    {techstacks}
                 </div>
             </div>
         </CardDiv>
     );
 }
 
-const FeaturedProjectCard = (props)=>{
+const FeaturedProjectCard = (props) => {
     return (
         <div className="p-2 col-12 d-flex flex-column align-items-center justify-content-center">
-            <CardFeatured style={{flex:1}} data={props.data}/>
+            <CardFeatured style={{ flex: 1 }} data={props.data} />
         </div>
     )
 }
-const OtherProjectCard = (props)=>{
+const OtherProjectCard = (props) => {
     return (
         <div className="p-2 col-12 col-sm-6 col-xl-4 d-flex flex-column align-items-center justify-content-center">
-            <CardOther style={{flex:1}} data={props.data}/>
+            <CardOther style={{ flex: 1 }} data={props.data} />
         </div>
     )
 }
 function ProjectsPage() {
-    
-    const featuredProjects = ProjectList.filter(val=>val.featured);
-    const otherProjects = ProjectList.filter(val=>!val.featured);
-    const FeaturedProjectTags = featuredProjects.map((data, ind)=><FeaturedProjectCard key={ind} data={data}/>)
-    const OtherProjectTags = otherProjects.map((data, ind)=><OtherProjectCard key={ind} data={data}/>)
+
+    const featuredProjects = ProjectList.filter(val => val.featured);
+    const otherProjects = ProjectList.filter(val => !val.featured);
+    const FeaturedProjectTags = featuredProjects.map((data, ind) => <FeaturedProjectCard key={ind} data={data} />)
+    const OtherProjectTags = otherProjects.map((data, ind) => <OtherProjectCard key={ind} data={data} />)
     return (
         <ContainerDiv className="container-fluid d-flex flex-column align-items-center justify-content-center">
             <div className="row p-0 m-0 w-100 d-flex flex-row align-items-start justify-content-center">
                 <div className="p-0 col-12 d-flex flex-column align-items-center justify-content-center">
-                    <h1 style={{fontWeight:400}}>My Projects<i style={{color:"yellow"}} className="ml-2 fas fa-fire"></i></h1>
+                    <SectionTitle>My Projects <i style={{ color: "var(--accent-primary)" }} className="ml-2 fas fa-fire"></i></SectionTitle>
                 </div>
             </div>
             <div className="row p-0 m-0 mt-5 w-100 justify-content-center">
                 <div className="col-12">
-                    <h4 style={{fontWeight:'lighter'}}>Featured Projects</h4>
+                    <h4 style={{ fontWeight: 600 }}>Featured Projects</h4>
                 </div>
                 {FeaturedProjectTags}
             </div>
             <div className="row p-0 m-0 mt-5 w-100 justify-content-center">
                 <div className="col-12">
-                    <h4 style={{fontWeight:'lighter'}}>More of my Awesomeness...</h4>
+                    <h4 style={{ fontWeight: 600 }}>More of my Awesomeness...</h4>
                 </div>
                 {OtherProjectTags}
             </div>
             <div className="row p-0 m-0 mb-5 mt-5 w-100 justify-content-center">
                 <div className="col-auto">
-                    <Anchor target="_blank" rel="noreferrer" href = {Links.github} style={{fontWeight:'lighter'}}>Check all projects</Anchor>
+                    <Anchor target="_blank" rel="noreferrer" href={Links.github}>Check all projects</Anchor>
                 </div>
             </div>
         </ContainerDiv>

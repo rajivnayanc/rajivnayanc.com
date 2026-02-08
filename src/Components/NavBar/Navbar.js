@@ -1,41 +1,46 @@
-import React, { useState} from 'react'
-import {ReactComponent as Logo} from '../../images/logo.svg';
-import {Link, NavLink} from 'react-router-dom';
-import {Links} from '../../shared/links';
-import {NavLinksList} from './NavLinksList';
+import React, { useState } from 'react';
+import { ReactComponent as Logo } from '../../images/logo.svg';
+import { Link, NavLink } from 'react-router-dom';
+import { Links } from '../../shared/links';
+import { NavLinksList } from './NavLinksList';
 import './navbarstyles.css';
 
 function NavBar(props) {
     const [navMenuExpanded, setNavMenuExpanded] = useState(false);
-    const handleDocClick = (e)=>{
+
+    const handleDocClick = (e) => {
         const navbarContainer = document.getElementById('navbarContainer');
         if (e.target !== navbarContainer && !navbarContainer.contains(e.target)) {
             setNavMenuExpanded(false);
             document.removeEventListener('click', handleDocClick, true);
         }
     }
-    const toggleNavBarMenu = (e)=>{
+
+    const toggleNavBarMenu = (e) => {
         e.preventDefault();
-        if(!navMenuExpanded){
+        if (!navMenuExpanded) {
             document.addEventListener('click', handleDocClick, true);
         }
         setNavMenuExpanded(!navMenuExpanded);
     }
 
-    const hideNavBarMenu = (e)=>{
+    const hideNavBarMenu = () => {
         setNavMenuExpanded(false);
     }
-    const logoColor = props.theme==="light"?"#222":"#abc";
-    const NavLinksComponents = NavLinksList.map((data, ind)=>(
+
+    // Logo color handled by CSS fill/stroke now, but keeping prop if needed for other logic
+    // const logoColor = props.theme === "light" ? "#222" : "#abc"; 
+
+    const NavLinksComponents = NavLinksList.map((data, ind) => (
         <li key={ind} className="nav-item">
-            <NavLink onClick={hideNavBarMenu} to={data.path} className="nav-link">
+            <NavLink onClick={hideNavBarMenu} to={data.path} className="nav-link" activeClassName="active">
                 <i className={data.icon}></i>
                 <span className="link-text">{data.name}</span>
             </NavLink>
         </li>
     ));
-    
-    const SocialMediaLinks = Links.socialmedia.map((data,ind)=>(
+
+    const SocialMediaLinks = Links.socialmedia.map((data, ind) => (
         <li key={ind} className="nav-item">
             <a rel="noreferrer" target="_blank" href={data.link} className="nav-link">
                 <i className={data.icon}></i>
@@ -45,34 +50,36 @@ function NavBar(props) {
     ));
 
     return (
-        <div id="navbarContainer" className="navbar">
+        <nav id="navbarContainer" className="navbar">
             {/* Header with Brand Name */}
             <div className="logo">
-                <Link className="nav-link logo-link" to = "/">
-                    <span className="link-text logo-text">@rajivnayanc</span>
-                    {/* <img src={logo} className="logoImg" alt="logo"/> */}
-                    <Logo fill={logoColor} stroke={logoColor} className="logoImg" alt="logo"/>
-
-                    <span onClick={(e)=>{e.preventDefault();props.setTheme()}} className="d-flex d-sm-none ml-auto">
-                        
-                    <i style={{cursor:"pointer" ,color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} 
-                    className={`fas fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
-                    </span>
-                    
-
-                    <button onClick = {toggleNavBarMenu} className="toggleButton">
-                            <i className = "fa fa-bars"></i>
-                    </button>
+                <Link className="logo-link" to="/">
+                    <Logo className="logoImg" alt="logo" />
+                    <span className="logo-text">rajivnayanc</span>
                 </Link>
+
+                {/* Mobile Theme Toggle */}
+                <div className="d-flex d-sm-none mobile-theme-toggle" onClick={(e) => { e.preventDefault(); props.setTheme() }}>
+                    <i className={`fas fa-${props.theme === "light" ? "sun" : "moon"}-o theme-toggle-icon`}
+                        style={{ color: props.theme === 'dark' ? 'var(--accent-primary)' : 'var(--text-primary)' }}></i>
+                </div>
+
+                <button onClick={toggleNavBarMenu} className="toggleButton">
+                    <i className="fa fa-bars"></i>
+                </button>
             </div>
 
-            {/* Collapsable NavBar */}
-            <div className={`navbar-menu${navMenuExpanded?' active-menu':''}`}>
+            {/* Collapsible NavBar */}
+            <div className={`navbar-menu${navMenuExpanded ? ' active-menu' : ''}`}>
                 <ul className="navbar-nav">
                     {NavLinksComponents}
-                    <li onClick={(e)=>props.setTheme()} style={{cursor:"pointer"}} className="nav-item d-none d-sm-flex">
-                        <div style={{marginLeft:"2rem", marginTop:"2rem"}}>
-                            <i style={{color:`${props.theme==='dark'?'yellow':'var(--text-secondary)'}`}} className={`fas fa-${props.theme==="light"?"sun":"moon"}-o`}></i>
+
+                    {/* Desktop Theme Toggle */}
+                    <li onClick={() => props.setTheme()} className="nav-item d-none d-sm-flex" style={{ cursor: "pointer", marginTop: 'auto' }}>
+                        <div className="nav-link">
+                            <i className={`fas fa-${props.theme === "light" ? "sun" : "moon"}-o theme-toggle-icon`}
+                                style={{ color: props.theme === 'dark' ? 'var(--accent-primary)' : 'var(--text-primary)' }}></i>
+                            <span className="link-text">{props.theme === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
                         </div>
                     </li>
                 </ul>
@@ -84,9 +91,7 @@ function NavBar(props) {
                     {SocialMediaLinks}
                 </ul>
             </div>
-            
-
-        </div>
+        </nav>
     )
 }
 

@@ -1,32 +1,30 @@
 import styled from 'styled-components';
 
-export const ContainerDiv = styled.div`
-    min-height:calc(100vh - 2rem);
-    @media only screen and (max-width:600px){
-        min-height: calc(100vh - 5rem);
-    }
-`;
-
 export const CardDiv = styled.div`
     position: relative;
-    font-weight: 100;
-    border-left: 5px solid green;
-    // border-bottom: 1px solid green;
-    padding: 15px;
-    background: var(--bg-primary);
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-    transition: all var(--animationTime);
-    &:hover{
-        background: var(--bg-secondary);
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--accent-primary);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: all var(--animation-speed) ease;
+    
+    &:hover {
+        background: var(--bg-tertiary);
+        transform: translateX(5px);
+        box-shadow: 2px 2px 10px var(--shadow-color);
     }
-    &:after{
-        content : "";
-        position: absolute;
-        left    : 0;
-        bottom  : 0px;
-        height  : 1px;
-        width   : 50%; 
-        border-bottom:1px solid green;
+    
+    h4 {
+        color: var(--text-primary);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    
+    h6 {
+        color: var(--text-secondary);
+        font-weight: 400;
+        margin-bottom: 1rem;
     }
 `;

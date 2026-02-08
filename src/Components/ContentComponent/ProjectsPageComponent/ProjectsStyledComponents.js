@@ -1,48 +1,59 @@
 import styled from 'styled-components';
 
-export const ContainerDiv = styled.div`
-    min-height:calc(100vh - 2rem);
-    @media only screen and (max-width:600px){
-        min-height: calc(100vh - 5rem);
-    }
-`;
-
 export const CardDiv = styled.div`
     position: relative;
-    font-weight: 100;
-    height:100%;
-    padding: 15px;
+    height: 100%;
+    padding: 1.5rem;
     background: var(--bg-secondary);
-    box-shadow: 0px 0px 3px 1px var(--shadow-color);
-    transform: translateY(0%);
-    transition: all var(--animationTime);
-    &:hover{
-        transform: translateY(-3%);
-    }
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    transition: all var(--animation-speed) ease;
+    overflow: hidden;
     
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px -10px var(--shadow-color);
+        border-color: var(--accent-glow);
+    }
 `;
 
 export const Tag = styled.span`
-    padding: 0.5rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    border-radius: 10px;
-    margin: 0.2rem;
-    background: gray;
-    color: white;
-    font-weight: 400;
-    font-size:0.8rem;
-    float: left;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    margin: 0.25rem;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all var(--animation-speed) ease;
+    
+    &:hover {
+        background: var(--accent-primary);
+        color: var(--bg-primary);
+    }
 `;
 
 export const Anchor = styled.a`
-    color: var(--text-primary);
-    background: var(--bg-secondary);
-    padding:0.5rem;
-    border-radius: 0.3rem;
-    transition: all var(--animationTime);
-    &:hover{
-        text-decoration: none;
-        color: var(--text-secondary);
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--accent-secondary);
+        transition: width var(--animation-speed) ease;
+    }
+    
+    &:hover:after {
+        width: 100%;
     }
 `;
