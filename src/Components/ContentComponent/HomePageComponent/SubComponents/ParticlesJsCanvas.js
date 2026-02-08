@@ -28,10 +28,19 @@ function ParticlesJsCanvas(props) {
                     color: {
                         value: color
                     },
-                    line_linked:{
-                        color:{
-                            value: color
-                        }
+                    size: {
+                        value: 0
+                    },
+                    links: {
+                        enable: true,
+                        color: color,
+                        distance: 150,
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2
                     }
                 },
             }}
