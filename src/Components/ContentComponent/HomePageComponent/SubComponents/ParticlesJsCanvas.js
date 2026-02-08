@@ -1,5 +1,5 @@
 import React from 'react';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import styled from 'styled-components';
 const ParticleCanvas  = styled(Particles)`
     position: fixed;
@@ -16,7 +16,7 @@ function ParticlesJsCanvas(props) {
     const color = props.theme==="dark"?"#FFFFFF":"#000000";
     return (
         <ParticleCanvas
-            params={{
+            options={{
                 particles: {
                     number: {
                     value: 100,

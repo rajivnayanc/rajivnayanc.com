@@ -223,7 +223,7 @@ export const ProjectList = [
     {
         title : '3D Rendering Engine',
         githubLink : "https://github.com/rajivnayanc/3D-rendering-engine-js",
-        hostedLink : "https://rajivnayanc.github.io/3D-rendering-engine-js/",
+        hostedLink : "https://rendering-engine.rajivnayanc.com/",
         techstack : ['JavaScript', 'React.js'],
         desc: 'A software rendering engine for web browsers. Built Software Ray Tracer from scratch. Planning to implement Software Rasterizer.',
         featured:true,
@@ -247,9 +247,9 @@ export const ProjectList = [
         image:neuroface
     }, 
     {
-        title : 'Image to ASCII Converter',
+        title : 'ASCII Image Creator',
         githubLink : "https://github.com/rajivnayanc/image_to_ascii_image",
-        hostedLink : "https://rajivnayanc.github.io/image_to_ascii_image/",
+        hostedLink : "https://rajivnayanc.github.io/ascii_image/",
         techstack : ['JavaScript', 'React.js'],
         desc: 'A web-app to convert an RGB image to set of ASCII characters. It uses intensity of each pixel of the grayscaled images and convert them to a corresponding ASCII character. This way, the whole image can be represented as ASCII characters. Go try them out and use them in your own terminals, or anywhere you want. 😉',
         featured:true,
