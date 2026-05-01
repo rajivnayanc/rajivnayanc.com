@@ -21,31 +21,6 @@ const LinkAnchor = styled.a`
     }
 `;
 
-const LinkAnchorV = styled.a`
-    color: var(--accent-primary);
-    padding: 3px;
-    text-decoration: none;
-    font-weight: 600;
-    
-    &:hover {
-        color: var(--accent-secondary);
-        text-decoration: none;
-    }
-`;
-
-const DivVert = styled.div`
-    writing-mode: vertical-rl;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    
-    b {
-        font-family: var(--font-heading);
-    }
-`;
-
 function SideSocialLinks() {
     const SocialMediaLinks = Links.socialmedia.map((data, ind) => (
         <div key={ind} className="col-12 text-center mb-2">
