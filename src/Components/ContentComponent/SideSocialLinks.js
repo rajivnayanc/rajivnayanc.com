@@ -56,14 +56,6 @@ function SideSocialLinks() {
     ));
     return (
         <FixedLinks>
-            <div className="row d-flex justify-content-end">
-                <DivVert className="mb-3 mb-sm-1 col-auto">
-                    <span>Logo Credits:</span>
-                    <LinkAnchorV rel="noreferrer" target="_blank" href={Links.logoCredit.link}>
-                        {Links.logoCredit.name}
-                    </LinkAnchorV>
-                </DivVert>
-            </div>
             <div className="d-block d-sm-none">
                 {SocialMediaLinks}
             </div>

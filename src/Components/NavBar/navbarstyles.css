@@ -111,11 +111,13 @@
 }
 
 .logoImg {
+    padding: 0.3rem;
     width: 2.5rem;
     height: 2.5rem;
+    margin-right: 0.3rem;
     transition: transform var(--animation-speed) ease;
     fill: var(--accent-primary) !important;
-    stroke: var(--accent-primary) !important;
+    /* stroke: var(--accent-primary) !important; */
 }
 
 .logo-text {
