@@ -1,6 +1,6 @@
 import React from 'react';
 import ParticlesJsCanvas from './SubComponents/ParticlesJsCanvas';
-import { ContainerDiv, StyledButton as Button, TagLineDiv, PCustom, PhotoDiv, StyleImgTag, TypedText } from './SubComponents/HomePageStyleComponents';
+import { ContainerDiv, StyledButton as Button, BlogButton, ButtonContainer, TagLineDiv, PCustom, PhotoDiv, StyleImgTag, TypedText } from './SubComponents/HomePageStyleComponents';
 import profilePhoto from '../../../images/profilePic/rajiv.jpg';
 import Typed from 'react-typed';
 import { Links } from '../../../shared/links';
@@ -28,10 +28,16 @@ function HomePage(props) {
                                 <TypedText />
                             </Typed>
 
-                            <div className="d-flex flex-row justify-content-start align-items-center mt-4">
+                            <ButtonContainer>
                                 <Button target="__blank__" href={`mailto:${Links.email}`}>Contact Me</Button>
                                 <Button target="__blank__" href={Links.resume}>Resume</Button>
-                            </div>
+                                <BlogButton target="__blank__" href={Links.blogs}>
+                                    <i className="fa fa-blog" style={{ marginRight: '0.5rem' }}></i> Blogs
+                                </BlogButton>
+                                <Button target="__blank__" href={Links.socialmedia.find(s => s.name === 'YouTube')?.link || '#'} style={{ backgroundColor: '#ff0000', color: '#fff', borderColor: '#ff0000', filter: 'drop-shadow(0 0 10px rgba(255, 0, 0, 0.4))' }}>
+                                    <i className="fab fa-youtube" style={{ marginRight: '0.5rem' }}></i> YouTube
+                                </Button>
+                            </ButtonContainer>
                         </TagLineDiv>
                     </div>
                     <div className="col-12 col-sm-4 col p-0 h-100">

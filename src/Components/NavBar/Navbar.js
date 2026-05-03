@@ -33,10 +33,17 @@ function NavBar(props) {
 
     const NavLinksComponents = NavLinksList.map((data, ind) => (
         <li key={ind} className="nav-item">
-            <NavLink onClick={hideNavBarMenu} to={data.path} className="nav-link" activeClassName="active">
-                <i className={data.icon}></i>
-                <span className="link-text">{data.name}</span>
-            </NavLink>
+            {data.external ? (
+                <a onClick={hideNavBarMenu} href={data.path} target="_blank" rel="noopener noreferrer" className="nav-link">
+                    <i className={data.icon}></i>
+                    <span className="link-text">{data.name}</span>
+                </a>
+            ) : (
+                <NavLink onClick={hideNavBarMenu} to={data.path} className="nav-link" activeClassName="active">
+                    <i className={data.icon}></i>
+                    <span className="link-text">{data.name}</span>
+                </NavLink>
+            )}
         </li>
     ));
 
@@ -84,7 +91,7 @@ function NavBar(props) {
                         </div>
                     </li>
                 </ul>
-                
+
                 {/* Social Links inside menu so they show on mobile */}
                 <div className="navbar-social_links">
                     <ul className="navbar-nav social-nav">

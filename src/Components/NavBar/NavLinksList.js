@@ -1,32 +1,38 @@
 export const NavLinksList = [
     {
-        name:   'Home',
-        path:   '/home',
-        icon:   'fa fa-home'
+        name: 'Home',
+        path: '/home',
+        icon: 'fa fa-home'
     },
     {
-        name:   'About Me',
-        path:   '/about-me',
-        icon:   'fa fa-info'
+        name: 'About Me',
+        path: '/about-me',
+        icon: 'fa fa-info'
     },
     {
-        name:   'Experience',
-        path:   '/experience',
-        icon:   'fa fa-briefcase'
+        name: 'Experience',
+        path: '/experience',
+        icon: 'fa fa-briefcase'
     },
     {
-        name:   'Education',
-        path:   '/education',
-        icon:   'fa fa-book'
+        name: 'Blogs',
+        path: 'https://blogs.rajivnayanc.com',
+        icon: 'fa fa-blog',
+        external: true
     },
     {
-        name:   'Projects',
-        path:   '/projects',
-        icon:   'fa fa-tasks'
+        name: 'Education',
+        path: '/education',
+        icon: 'fa fa-book'
     },
     {
-        name:   'Publications',
-        path:   '/publications',
-        icon:   'fa fa-file'
+        name: 'Projects',
+        path: '/projects',
+        icon: 'fa fa-tasks'
+    },
+    {
+        name: 'Publications',
+        path: '/publications',
+        icon: 'fa fa-file'
     },
 ];

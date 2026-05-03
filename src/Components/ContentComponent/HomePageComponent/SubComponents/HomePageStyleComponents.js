@@ -1,6 +1,44 @@
 import styled, { keyframes } from 'styled-components';
 import { ContainerDiv, StyledButton } from '../../../shared/SharedStyleComponents';
 
+export const BlogButton = styled(StyledButton)`
+    border-color: #f39c12;
+    color: #f39c12;
+
+    &::before {
+        background: linear-gradient(90deg, #f39c12, #e67e22);
+    }
+    
+    &:hover {
+        box-shadow: 0 4px 20px rgba(243, 156, 18, 0.4);
+    }
+`;
+
+export const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+
+    @media only screen and (max-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        
+        & > a {
+            width: 100%;
+            margin: 0;
+            padding: 0.8rem 0.5rem;
+            font-size: 1rem;
+        }
+    }
+`;
+
 export { ContainerDiv, StyledButton };
 
 const fadeIn = keyframes`
