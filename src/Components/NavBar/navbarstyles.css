@@ -355,6 +355,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     font-weight: bold;
     text-align: center;
     color: var(--text-primary);
@@ -365,36 +366,52 @@
     height: 3rem;
 }
 
+.logo-left, .logo-center, .logo-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo-left {
+    width: 5rem;
+    min-width: 5rem;
+    justify-content: center;
+}
+
+.logo-center {
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.logo-right {
+    justify-content: flex-end;
+}
+
 .logo .logo-link {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    align-items: center;
+    text-decoration: none;
 }
 
-.logo>.nav-link {
-    height: 3rem;
-}
-
-.logo .nav-link .toggleButton {
+.logo .toggleButton {
     display: none;
     background: rgba(0, 0, 0, 0);
     border: none;
     padding: 0;
     margin: 0;
-    margin-left: auto;
     width: 3rem;
     height: 3rem;
     color: var(--text-primary);
     transition: all var(--animationTime);
 }
 
-.logo .nav-link .toggleButton i {
+.logo .toggleButton i {
     width: 1rem;
     margin: 0;
     padding: 0;
 }
 
-.logo .nav-link .toggleButton:hover {
+.logo .toggleButton:hover {
     background: var(--bg-hover);
     color: var(--text-primary);
 }
@@ -402,7 +419,6 @@
 .logo .logoImg {
     transform: scale(1.8) rotate(0deg);
     transition: var(--animationTime);
-    margin-left: 0.9rem;
 }
 
 .logo-text {
@@ -411,6 +427,7 @@
     left: -999px;
     color: var(--text-secondary);
     transition: var(--animationTime);
+    white-space: nowrap;
 }
 
 .show-div {
@@ -431,24 +448,33 @@
     }
 
     .logo {
-        flex-direction: column;
+        flex-direction: row;
         height: 3rem;
         margin-bottom: 0;
+        padding: 0 1rem;
     }
 
-    .logo .logo-link {
+    .logo-left {
+        flex: 1;
+        width: auto;
+        min-width: auto;
+        justify-content: flex-start;
+    }
+
+    .logo-center {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .logo-right {
+        flex: 1;
         justify-content: flex-end;
-        align-items: center;
+        gap: 0.5rem;
     }
 
-    .logo .logoImg {
-        order: -1;
-    }
-
-    .logo .logo-text {
-        position: relative;
-        left: 1rem;
-        justify-self: center;
+    .logo-text {
+        position: static;
+        left: auto;
     }
 
     .link-text {
@@ -457,7 +483,7 @@
         filter: opacity(1);
     }
 
-    .logo .nav-link .toggleButton {
+    .logo .toggleButton {
         display: block;
     }
 
@@ -515,13 +541,22 @@
         margin-bottom: 1rem;
     }
 
+    .navbar:hover .logo .logo-left {
+        margin-left: auto;
+    }
+
     .navbar:hover .logo .logoImg {
-        margin-left: 10rem;
         transform: scale(1.8) rotate(-360deg);
     }
 
     .navbar:hover .logo-text {
-        left: 1rem;
+        position: static;
+        margin-left: 1rem;
+    }
+
+    .logo-text {
+        position: absolute;
+        left: -999px;
     }
 
     .navbar-nav {
@@ -530,5 +565,58 @@
 
     .nav-link {
         width: 100%;
+    }
+}
+
+/* --- NEW SOCIAL LINKS AND MENU FIXES --- */
+
+/* Mobile: Social Links in Menu */
+@media only screen and (max-width: 600px) {
+    .navbar-social_links {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .social-nav {
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0 !important;
+    }
+
+    .social-nav .nav-item {
+        width: auto !important;
+    }
+
+    .social-nav .nav-link {
+        width: auto !important;
+        padding: 0.5rem !important;
+        height: auto !important;
+    }
+
+    .social-nav .link-text {
+        display: none !important; /* hide text on mobile for icons only */
+    }
+
+    .social-nav i {
+        margin: 0 !important;
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop: Flex menu to push social to bottom */
+@media only screen and (min-width: 601px) {
+    .navbar-menu {
+        display: flex !important;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .navbar-social_links {
+        display: block !important;
+        margin-top: auto !important;
     }
 }

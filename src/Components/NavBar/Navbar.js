@@ -53,20 +53,21 @@ function NavBar(props) {
         <nav id="navbarContainer" className="navbar">
             {/* Header with Brand Name */}
             <div className="logo">
-                <Link className="logo-link" to="/">
-                    <Logo className="logoImg" alt="logo" />
-                    <span className="logo-text">rajivnayanc</span>
-                </Link>
-
-                {/* Mobile Theme Toggle */}
-                <div className="d-flex d-sm-none mobile-theme-toggle" onClick={(e) => { e.preventDefault(); props.setTheme() }}>
-                    <i className={`fas fa-${props.theme === "light" ? "sun" : "moon"}-o theme-toggle-icon`}
-                        style={{ color: props.theme === 'dark' ? 'var(--accent-primary)' : 'var(--text-primary)' }}></i>
+                <div className="logo-left">
+                    <Link className="logo-link" to="/">
+                        <Logo className="logoImg" alt="logo" />
+                    </Link>
                 </div>
-
-                <button onClick={toggleNavBarMenu} className="toggleButton">
-                    <i className="fa fa-bars"></i>
-                </button>
+                <div className="logo-center">
+                    <Link className="logo-link" to="/">
+                        <span className="logo-text">{props.brandName || "rajivnayanc"}</span>
+                    </Link>
+                </div>
+                <div className="logo-right header-controls">
+                    <button onClick={toggleNavBarMenu} className="toggleButton">
+                        <i className="fa fa-bars"></i>
+                    </button>
+                </div>
             </div>
 
             {/* Collapsible NavBar */}
@@ -74,8 +75,8 @@ function NavBar(props) {
                 <ul className="navbar-nav">
                     {NavLinksComponents}
 
-                    {/* Desktop Theme Toggle */}
-                    <li onClick={() => props.setTheme()} className="nav-item d-none d-sm-flex" style={{ cursor: "pointer", marginTop: 'auto' }}>
+                    {/* Theme Toggle */}
+                    <li onClick={() => props.setTheme()} className="nav-item theme-toggle-item" style={{ cursor: "pointer", marginTop: 'auto' }}>
                         <div className="nav-link">
                             <i className={`fas fa-${props.theme === "light" ? "sun" : "moon"}-o theme-toggle-icon`}
                                 style={{ color: props.theme === 'dark' ? 'var(--accent-primary)' : 'var(--text-primary)' }}></i>
@@ -83,13 +84,13 @@ function NavBar(props) {
                         </div>
                     </li>
                 </ul>
-            </div>
-
-            {/* Large Screen nav Social Links */}
-            <div className="navbar-social_links">
-                <ul className="navbar-nav">
-                    {SocialMediaLinks}
-                </ul>
+                
+                {/* Social Links inside menu so they show on mobile */}
+                <div className="navbar-social_links">
+                    <ul className="navbar-nav social-nav">
+                        {SocialMediaLinks}
+                    </ul>
+                </div>
             </div>
         </nav>
     )

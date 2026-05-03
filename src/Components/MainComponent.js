@@ -29,7 +29,7 @@ function MainComponent() {
     return (
         <Router>
             <div>
-                <Navbar setTheme={toggleTheme} theme={theme}/>
+                <Navbar setTheme={toggleTheme} theme={theme} brandName="rajivnayanc" />
                 <MainContent theme={theme}/>
             </div>
         </Router>
